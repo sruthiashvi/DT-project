@@ -1,0 +1,42 @@
+.header{
+    color:#ff1a8c;
+    font-size:14px;
+
+}
+.headertext{
+    color:gray;
+}
+ #list li{
+    display: inline;
+    padding-right:5px;
+}
+.helper{
+    padding:15px;
+}
+span{
+    padding-right:10px;
+}
+.pinkbtn{
+    background-color: #ff1a8c;
+    width:30%;
+    color:white;
+}
+.icon{
+    color:grey;
+}
+.box{
+    height:10%;
+    border: 1px solid grey;
+}
+.kn{
+    color:#ff1a8c;
+    font-size:20px;
+    font-weight: 600;
+}
+body{
+    color:grey;
+}
+#wrapper{
+    display: flex;
+    align-items: center;
+}
