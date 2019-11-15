@@ -1,0 +1,228 @@
+
+<html>
+        <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="sidetab.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"rel = "stylesheet">
+        <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+         <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#bar1").click(function(){
+                    $("#bar").css("color","#ff1a8c");
+                    $("#slider").css("color","");
+                    $("#box").css("color","");
+        
+                });
+                $("#slider1").click(function(){
+                    $("#slider").css("color","#ff1a8c");
+                    $("#bar").css("color","");
+                    $("#box").css("color","");
+                });
+                $("#box1").click(function(){
+                    $("#box").css("color","#ff1a8c");
+                    $("#slider").css("color","");
+                    $("#bar").css("color","");
+                });
+                $(".mob").click(function(){
+                    $("#hidemob").css("display","block")
+        
+                });
+                $(".data").click(function(){
+                    $("#hidedata").css("display","block")
+        
+                });
+               /* $(".thirdtab a").click(function(){
+                    $(this).css("color","#ff1a8c");
+                });*/
+        
+            });
+            function opencontent(evt, cityName) {
+          // Declare all variables
+          var i, tabcontent, tablinks;
+        
+          // Get all elements with class="tabcontent" and hide them
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+        
+          // Get all elements with class="tablinks" and remove the class "active"
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+        
+          // Show the current tab, and add an "active" class to the link that opened the tab
+          document.getElementById(cityName).style.display = "block";
+         // document.getElementById(iconid).style.color="pink";
+         // document.getElementById(iconid).style.border="1 px solid pink";
+        
+          evt.currentTarget.className += " active";
+        }
+         /* $(function() {
+              $("#datepicker").click(function(){
+                  alert("hi")
+                    $("#id").datepicker("show");
+                   // $("#datepicker").datepicker("show");
+                 });
+          });*/
+        $(function() {
+        $( ".date" ).focus(function(){
+            $(this).datepicker();
+        });
+        $(".highlight").mouseenter(function(){
+            $(this).css("border","1px solid #ff1a8c")
+        });
+        $(".highlight").mouseleave(function(){
+            $(this).css("border","")
+        });
+        });
+        </script>
+        <style>
+         .ui-widget-header {
+            background:none;
+            color:black;
+            }
+            
+            .ui-widget-content .ui-state-default:hover{
+            background: #77CC6D;
+            border-radius: 2px;
+            }</style>
+        </head>
+        
+        <body>
+                <div class="tab">
+                        <button class="tablinks" id="bar1" onclick="opencontent(event, 'first')"><i class="fa fa-bars tabicon" id="bar"  aria-hidden="true" style="font-size: 25px;width: 35px; border-bottom: 1px solid #bfbfbf;"></i></button>
+                        <button class="tablinks" id="slider1" onClick="opencontent(event, 'second')"><i class="fa fa-sliders  tabicon" id="slider" aria-hidden="true"  style="font-size: 25px;width: 35px; border-bottom: 1px solid #bfbfbf;" ></i></button>
+                        <button class="tablinks" id="box1" onClick="opencontent(event, 'fourth')"><i class="fa fa-bars tabicon" id="box"  aria-hidden="true"  style="font-size: 25px;width: 35px; border-bottom: 1px solid #bfbfbf;"></i></button>
+                        <button><i class="fa fa-mobile tabicon" id="hidemob" aria-hidden="true"  style="font-size: 38px;width: 33px;float:right;"></i></button>
+                        <button><i class="fa fa-dropbox tabicon" id="hidedata" aria-hidden="true"  style="font-size: 29px;width: 36px;"></i></button>
+                        
+                      </div>
+                            <div class="row offset-md-1 titlefirst">
+                                    <div class="col-md-4 col-xl-2">
+                                            <div class="header">Tip documenta</div>
+                                                <select class="form-control highlight">
+                                                    <option>Zahtjev</option>
+                                                    <option></option>
+                                                    <option></option>
+                                                    <option></option>
+                                                </select>
+                                            
+                                        </div>
+                                        <div class="col-md-4 col-xl-2">
+                                                <span class="header">Zeljeni datum realizacije</span>                               
+                                                        <input type="text" style="position:relative;" class="form-control date highlight" >
+                                                        <span style="position: absolute; right:12px;top:30px;" class="fa fa-calendar "></span>
+                                                                             
+                                            </div>
+                                        <div class="col-md-4 col-xl-2">
+                                            <div class="header">Datum prodaje</div>
+                                                    <input type="text" style="position:relative;" class="form-control date highlight" >
+                                                    <span style="position:absolute; right:12px;top:30px;" class="fa fa-calendar "></span>
+                                                      
+                                        </div>
+                                        <div class="col-md-4 col-xl-2">
+                                            <div class="header">Prodao</div>                               
+                                                <input type="text" class="form-control highlight"></input>
+        
+                                        </div>
+                                        <div class="col-md-4 col-xl-2">
+                                            <div class="header">Rola</div>                  
+                                                <select class="form-control highlight">
+                                                    <option>OM_Interno</option>
+                                                    <option></option>
+                                                    <option></option>
+                                                    <option></option>
+                                                </select>
+                                        </div>
+                                        <div class="col-md-4 col-xl-2">
+                                            <div class="header">Rola</div>
+                                                <select class="form-control highlight">
+                                                    <option>Direktno</option>
+                                                    <option></option>
+                                                    <option></option>
+                                                    <option></option>
+                                                </select>
+                                        </div>
+                            </div>
+                      
+                      <div id="second" class="tabcontent">
+                            <div class="sidenav secondtab">
+                                    <h2 style="color:#ff1a8c;">Interakcije</h2>
+                                    <a href="#" class="change">Aktivacija</a>
+                                    <a href="#" class="change">MNP portin</a>
+                                    <a href="#" class="change">Simpa prijelaz</a>
+                                    <a href="#" class="change">Promjena vlasnika</a>
+                                    <a href="#" class="change">Transfer prikjucka</a>
+                                  </div>
+                      </div>    
+                     <div id="third" class="tabcontent">
+                            <div class="sidenav">                 
+                                    <h3 style="color:#ff1a8c;">Kategorije</h3>
+                                    <!--<h3 class="headingwithicon" style="color:#ff1a8c;">Kategorije</h3><i class="fa fa-trash-o" aria-hidden="true" style="font-size: 30px;"></i>-->
+                                        <h3>Govorne usluge</h3>
+                                            <a href="#" class="normal">Mobile usluge</a>
+                                            <a href="#" class="change mob">Mobile tarife</a>
+                                            <a href="#" class="change mob">Iskon tarife</a>
+                                            <a href="#" class="normal">Fiksne usluge</a>
+                                            <a href="#" class="change mob">Fiksni prikljucak</a>
+                                        <h3>Internet/Data</h3>
+                                            <a href="#" class="normal">Mobile usluge</a>
+                                            <a href="#" class="change data">Tarife na pretplatu</a>
+                                            <a href="#" class="change data">Tarife na bonove</a>
+                                            <a href="#" class="normal">Fiksne usluge</a>
+                                            <a href="#" class="change data">Kucni Internet</a>
+                                            <a href="#" class="change data">Sirokopojasni Internet</a>
+                                         <h3>TV-Multimedija</h3>
+                                            <a href="#" class="normal">TV</a>
+                                            <a href="#" class="change">Televizija</a>
+                                            <a href="#" class="change">DTH pay TV</a>
+                                            <a href="#" class="change">IPTV Headend usluga</a>
+                                            <a href="#" class="normal">Multimedija</a>
+                                            <a href="#" class="change">TV ToGo</a>
+                                            <a href="#" class="change">Deezer</a>
+                                  </div>
+                        </div> 
+                    
+                        <div id="fourth" class="tabcontent">
+                                <div class="sidenav">                 
+                                        <!--<h3 style="color:#ff1a8c;">Kategorije</h3>-->
+                                        <h3 class="headingwithicon elipsis" style="color:#ff1a8c;">Kategorije</h3><i class="fa fa-trash-o" aria-hidden="true" style="font-size: 30px;color:#b3b3b3;padding-right:8px;padding-top:1px;float: right;"></i>
+                                            <h3>Govorne usluge</h3>
+                                                <a href="#" class="normal">Mobile usluge</a>
+                                                <a href="#" class="change mob">Mobile tarife</a>
+                                                <a href="#" class="change mob">Iskon tarife</a>
+                                                <a href="#" class="normal">Fiksne usluge</a>
+                                                <a href="#" class="change mob">Fiksni prikljucak</a>
+                                            <h3>Internet/Data</h3>
+                                                <a href="#" class="normal">Mobile usluge</a>
+                                                <a href="#" class="change data">Tarife na pretplatu</a>
+                                                <a href="#" class="change data">Tarife na bonove</a>
+                                                <a href="#" class="normal">Fiksne usluge</a>
+                                                <a href="#" class="change data">Kucni Internet</a>
+                                                <a href="#" class="change data">Sirokopojasni Internet</a>
+                                             <h3>TV-Multimedija</h3>
+                                                <a href="#" class="normal">TV</a>
+                                                <a href="#" class="change">Televizija</a>
+                                                <a href="#" class="change">DTH pay TV</a>
+                                                <a href="#" class="change">IPTV Headend usluga</a>
+                                                <a href="#" class="normal">Multimedija</a>
+                                                <a href="#" class="change">TV ToGo</a>
+                                                <a href="#" class="change">Deezer</a>
+                                      </div>
+                          </div>                
+                        
+                    
+                    
+        </body>

@@ -1,0 +1,116 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="sidetab.css">
+<link rel="stylesheet" type="text/css" href="header.css">
+<link rel="stylesheet" type="text/css" href="tab.css">
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"rel = "stylesheet">
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+ <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $(".highlight").mouseenter(function(){
+            $(this).css("border","1px solid #ff1a8c")
+        });
+        $(".highlight").mouseleave(function(){
+            $(this).css("border","")
+        });
+    });
+</script>
+<style>
+ .ui-widget-header {
+    background:none;
+    color:black;
+    }
+    
+    .ui-widget-content .ui-state-default:hover{
+    background: #77CC6D;
+    border-radius: 2px;
+    }</style>
+</head>
+
+<body>
+        <div class="tab">
+                <a href=""><i class="fa fa-bars" aria-hidden="true" style="font-size: 25px;float:right;"></i></a>
+                    <a href=""><i class="fa fa-sliders" aria-hidden="true"  style="font-size: 25px; width:40px;" ></i> Interakcija</a>
+                    <a href=""><i class="fa fa-bars" aria-hidden="true"  style="font-size: 25px;width:40px;"></i> Kategorija</a>
+                    <a href=""><i class="fa fa-mobile" aria-hidden="true"  style="font-size: 35px;width:40px;"></i> Mobilna tarifa</a>
+                    <a href=""><i class="fa fa-dropbox"aria-hidden="true"  style="font-size: 25px;width:40px;"></i> Tarifne grupe</a>
+                </div>
+                    <div class="row offset-md-1 titlesecond">
+                            <div class="col-md-4 col-xl-2">
+                                    <div class="header">Tip documenta</div>
+                                        <select class="form-control highlight">
+                                            <option>Zahtjev</option>
+                                            <option></option>
+                                            <option></option>
+                                            <option></option>
+                                        </select>
+                                    
+                                </div>
+                                <div class="col-md-4 col-xl-2">
+                                        <span class="header">Zeljeni datum realizacije</span>                               
+                                                <input type="text" style="position:relative;" class="form-control date highlight" >
+                                                <span style="position: absolute; right:12px;top:30px;" class="fa fa-calendar "></span>
+                                                                     
+                                    </div>
+                                <div class="col-md-4 col-xl-2">
+                                    <div class="header">Datum prodaje</div>
+                                            <input type="text" style="position:relative;" class="form-control date highlight" >
+                                            <span style="position:absolute; right:12px;top:30px;" class="fa fa-calendar "></span>
+                                              
+                                </div>
+                                <div class="col-md-4 col-xl-2">
+                                    <div class="header">Prodao</div>                               
+                                        <input type="text" class="form-control highlight"></input>
+
+                                </div>
+                                <div class="col-md-4 col-xl-2">
+                                    <div class="header">Rola</div>                  
+                                        <select class="form-control highlight">
+                                            <option>OM_Interno</option>
+                                            <option></option>
+                                            <option></option>
+                                            <option></option>
+                                        </select>
+                                </div>
+                                <div class="col-md-4 col-xl-2">
+                                    <div class="header">Rola</div>
+                                        <select class="form-control highlight">
+                                            <option>Direktno</option>
+                                            <option></option>
+                                            <option></option>
+                                            <option></option>
+                                        </select>
+                                </div>
+                    </div>
+                            <div class="row titlesecond">
+                                <div class="col-xl-2 col-md-4">
+                                    <div class="header">Tip documenta</div>
+                                    <div class="headertext">Zahtjev</div>
+                                </div>                         
+                                         <div class="col-xl-7 col-md-8">
+                                                <div class="header">Odabrane kategorije</div>
+                                                <div class="row">
+                                                <span class="headertext col-xl-6 col-md-4">
+                                                    <div>Govorne usluge-Mobilne usluge-Mobilne tarife <i class="fa fa-times" aria-hidden="true" style="color:#ff1a8c;font-size:12px;"></i></div>
+                                                    <div class="headertext">Internet/Data-Mobilne usluge-Tarife na bonove <i class="fa fa-times" aria-hidden="true" style="color:#ff1a8c;font-size:12px;"></i></div>
+                                                </span>
+                                                <span class="headertext col-xl-6 col-md-4">Internet/Data-Mobilne usluge-Tarife na pretplatu</span>
+                                            </div>
+                                                
+                                         </div>
+                                                                  
+                                        </div>
+              
+            
+</body>

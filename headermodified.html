@@ -1,0 +1,106 @@
+<html>
+<head>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+        rel = "stylesheet">
+     <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+     <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+     
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="header.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<style>
+.ui-widget-header {
+background:none;
+color:black;
+}
+
+.ui-widget-content .ui-state-default:hover{
+background: #77CC6D;
+border-radius: 2px;
+}
+</style>
+<script>
+ /* $(function() {
+      $("#datepicker").click(function(){
+          alert("hi")
+            $("#id").datepicker("show");
+           // $("#datepicker").datepicker("show");
+         });
+  });*/
+$(function() {
+$( ".date" ).focus(function(){
+    $(this).datepicker();
+});
+});
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="header">Tip documenta</div>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>Zahtjev</option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="header">Zeljeni datum realizacije</div>
+                <div class='input-group date' id='datetimepicker2'>
+                        <input type='text' id="date" class="form-control date" />
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-calendar" id="datepicker"></i>
+                        </span>
+                    </div>
+            </div>
+            <div class="col-md-2">
+                <div class="header">Datum prodaje</div>
+                <div class='input-group date' id='datetimepicker2'>
+                        <input type='text' class="form-control date" id="date" />
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </span>
+                    </div>
+            </div>
+            <div class="col-md-2">
+                <div class="header">Prodao</div>
+                <div class="form-group">
+                    <input type="text" class="form-control"></input>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="header">Rola</div>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>OM_Interno</option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="header">Rola</div>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>Direktno</option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
