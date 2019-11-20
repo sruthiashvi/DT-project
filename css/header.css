@@ -6,6 +6,9 @@
     text-overflow: ellipsis;
 
 }
+span{
+    margin-right: 10px;
+}
 .elipsis{
     overflow: hidden;
     white-space: nowrap;
