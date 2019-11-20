@@ -1,0 +1,1188 @@
+<html>
+<head>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body
+{
+  background-color: #eae7e7;
+  font-family: sans-serif;
+}
+
+.sidebox
+{
+	background: #fff;
+	margin: 5px;
+  margin: 10px 5px 10px 10px;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color 
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}*/
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.checkmark-darkblue input:checked ~ .checkmark {
+  background-color: #fff;
+}
+.checkmark-lightblue input:checked ~ .checkmark {
+  background-color: #fff;
+}
+.checkmark-white input:checked ~ .checkmark {
+  background-color: #ff008d;
+  border: solid #ff008d;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 5px;
+    top: 1px;
+    width: 8px;
+    height: 14px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.checkmark-darkblue .checkmark:after{
+  left: 5px;
+    top: 1px;
+    width: 8px;
+    height: 14px;
+  border: solid #0388e6;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+	
+}
+.checkmark-lightblue .checkmark:after{
+  left: 5px;
+    top: 1px;
+    width: 8px;
+    height: 14px;
+  border: solid #92d2ff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+	
+}
+
+.checkmark-white .checkmark:after{
+  left: 5px;
+    top: 1px;
+    width: 8px;
+    height: 14px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+	
+}
+
+.data-container{
+	color: white;
+}
+
+.image{
+	height : 10px;
+	width : 10px;
+  padding-right: 32px;
+}
+
+.darkblue-background{
+	background-color : #0388e6;
+}
+.lightblue-background
+{
+	background-color : #92d2ff;
+}
+.white-background
+{
+	background-color : #fff;
+	color: #ff008d;
+}
+
+.table-tile{
+	display :table-cell;
+	vertical-align: middle;
+}
+
+.checkbox-white{
+	background-color: #0388e6;
+    border: solid white;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 4px;
+}
+.checkbox-gray{
+	background-color: #fff;
+    border: solid gray;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 4px;
+}
+
+.checkbox-lightblue-background{
+	background-color: #92d2ff;
+}
+
+.checkbox-white-background{
+	background-color: #fff;
+}
+.table1-row{
+	padding: 10px 10px;
+    display: table;
+    table-layout: fixed;
+	width: 100%;
+}
+.table-row{
+	padding: 10px 10px;
+    display: table;
+    table-layout: fixed;
+	width: 100%;
+}
+.table-row:hover{
+  border: solid #ff008d 1px;
+}
+.row-border{
+	border: solid #e0e0e0 1px;
+}
+.row-border-pink {
+    border: solid #ff008d 1px;
+}
+.cell-content{
+	width:100%;
+}
+
+#expand1, #expand2, #expand3, #expand2-option1, #expand2-option2, #expand2-option3, #expand3-option1, #expand3-option2, #expand3-option3, #expand3-option4, #expand3-option5, #expand3-option6
+{
+	display:none;
+}
+
+.glyphicon-phone{
+	font-size:20px;
+	top: -2px;
+}
+.glyphicon, .fab, .fas, .fa{
+	padding: 5px;
+}
+.fa-circle{
+	font-size:17px;
+}
+.icon-gray .glyphicon-phone, .glyphicon-menu-left, .fa-sistrix, .fa-angle-double-up{
+	color:#d8d8d8;
+}
+.icon-green{
+	color:green;
+}
+.icon-red{
+	color:red;
+}
+.align-right{
+	float:right;
+}
+.padding5{
+	padding: 5px;
+}
+
+.container1{
+	height:600px;
+	width:100%;
+	overflow-y:scroll;
+	overflow-x: hidden;
+}
+.text-reduce{
+  display: block;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ff008d;
+}
+
+/* Custom Scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.container-centre{
+    background-color: white;
+    margin: 10px 5px 5px 5px;
+    border-radius: 3px;
+    border: solid 1px #c7c7c7;
+}
+/* icons */
+
+.glyphicon, .fab, .fas{
+	padding: 0 15px 0 15px;
+}
+.glyphicon-menu-left, .fa-sistrix, .fa-angle-double-up, .fa-columns, .icon-gray{
+	color:#d8d8d8;
+}
+
+/* Align */
+.align-right{
+	float:right;
+}
+.padding5{
+	padding: 5px;
+}
+.text-pink{
+	color: #ff008d;
+    padding: 17px;
+}
+.text-blue{
+	color: #92d2ff;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+/* Background color */
+.gray-background{
+	background-color: #d8d8d8;
+}
+
+.box-container{
+	padding:17px;
+	border-bottom: solid 1px #6b6b6b;
+}
+
+select {
+    padding: 10px;
+	padding-right: 60px;
+    border-radius: 5px;
+    font-size: 15px;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.icon-select{
+	pointer-events: none;
+    left: -62px;
+    top: 8px;
+}
+.list-item{
+	background-color: white;
+	border-radius: 5px;
+	display: table-cell;
+	float: left;
+	width: 33.33%;
+	padding: 10px;
+	margin-bottom: 17px;
+}
+.box2{
+	padding: 17px;
+	color: #6b6b6b;
+}
+.box2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.border17{
+	border-right: solid 17px #d8d8d8;
+	border-left: solid 17px #d8d8d8;
+}
+label{
+	font-weight: 100;
+	font-size: 15px;
+    font-family: sans-serif;
+}
+/* checkbbox style */
+input[type='checkbox'].pseudo-checkbox + label:before,
+input[type='checkbox'].pseudo-checkbox + label:after{
+    position: relative;
+    top: 6px;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: 100;
+	font-size: 31px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+input[type='checkbox'].pseudo-checkbox + label:before{/*unchecked icon*/
+    content: "\f096";
+}
+input[type='checkbox']:checked.pseudo-checkbox + label:before{/*checked icon*/
+    content: "\f14a";
+	color: #ff008d;
+}
+.margin0{
+    margin-bottom: 0px;
+}
+#expand21, #expand22, #expand23, #division1, #division2, #division3{
+	display: none;
+}
+
+/*Faded Scoll */
+.fadedScroller {
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+    position: relative;
+    height: 1000px;
+    padding: 15px;
+    background-color: white;
+}
+.height530{
+  height: 530px;
+}
+.fadedScroller_fade {
+    content:'';
+    margin-top: -52px;
+    height: 53px;
+    background: linear-gradient(to bottom, transparent, white);
+    position: relative;
+    pointer-events: none;
+}
+.column {
+  float: left;
+}
+
+.left, .right {
+  width: 25%;
+}
+.left{
+  padding-left: 10px;
+}
+
+.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.rightbox {
+			background-color: white;
+			margin: 5px;
+			font-size: 22px;
+			border-radius: 3px;
+      border: solid 1px #c7c7c7;
+			overflow-y: hidden;
+      margin: 10px 10px 10px 5px;
+		}
+
+		.data-container {
+			color: white;
+		}
+
+		.table-row {
+			padding: 10px 10px;
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+		}
+
+		/* icons */
+
+		.glyphicon,
+		.fab,
+		.fas {
+			padding: 0 15px 0 15px;
+		}
+
+		.glyphicon-menu-left,
+		.fa-sistrix,
+		.fa-angle-double-up,
+		.fa-columns,
+		.icon-gray {
+			color: #d8d8d8;
+		}
+
+		/* Align */
+		.align-right {
+			float: right;
+		}
+
+		.padding5 {
+			padding: 5px;
+		}
+
+		.row1 {
+			height: 23px;
+			font-size: 15px;
+			background-color: #ff008d;
+			color: white;
+			padding-left: 5px;
+		}
+
+		#menuup31 {
+			display: none;
+		}
+
+		.sidebox-container {
+			padding-left: 20px;
+			padding-right: 20px;
+			font-size: 13px;
+			padding-top: 5px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    border: solid 1px #c7c7c7;
+		}
+		.margin5{
+			margin-bottom: 5px;
+		}
+
+		select {
+			padding: 10px;
+			width: 100%;
+			padding-right: 34px;
+			border-radius: 3px;
+			font-size: 15px;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
+
+		.icon2-select {
+			pointer-events: none;
+			left: 6px;
+			float: right;
+			top: -22px;
+		}
+		.pink-color{
+			color: #ff008d;
+		}
+		.select2{
+			padding: 4px;
+    width: 100%;
+    height: 31px;
+    padding-right: 34px;
+    border-radius: 3px;
+    font-size: 11px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+		}
+	/* Background color */
+.gray-background{
+	background-color: #eae7e7;
+}
+.darkgray-background{
+	background-color: #bfbfbf;
+}
+.lightblue-background
+{
+	background-color : #92d2ff;
+}
+.text-reduce{
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ff008d;
+}
+#division31, #division32, #division33, #division34, #division35, #division36, #menuup31, #menuup32, #menuup33, #menuup34, #menuup35, #menuup36{
+	display: none;
+}
+/* Custom Scroll bar */
+/* width */
+.noScroller::-webkit-scrollbar {
+	 display: none; 
+	 width: 0 !important }
+.noScroller { overflow: -moz-scrollbars-none; }
+.noScroller { -ms-overflow-style: none; }
+/*Faded Scoll */
+.noScroller {
+    overflow-y: scroll;
+    position: relative;
+    height: 552px;
+}
+.noScroller_fade {
+    content:'';
+    margin-top: -52px;
+    height: 53px;
+    background: linear-gradient(to bottom, transparent, white);
+    position: relative;
+	pointer-events: none;
+}
+</style>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+    <div class="row">
+        <div class="column left">
+<div class="sidebox">
+<div class="data-container">
+<div class="table1-row padding5">
+<span class="glyphicon glyphicon-menu-left"></span>
+<span class="fas fa-angle-double-up align-right"></span>
+<span class="fab fa-sistrix align-right"></span>
+</div>
+</div>
+
+<div class="container1">
+<div class="data-container darkblue-background">
+<div class="table1-row">
+<div class="table-tile cell-content">
+<label class="container checkmark-darkblue"><span class="glyphicon glyphicon-user"></span>
+Single precculici
+  <input type="checkbox">
+  <span class="checkmark checkbox-white"></span>
+</label>
+</div>
+<div class="table-tile image">
+<span class="fa fa-circle-o"></span></div>
+<div class="table-tile image">
+<span id="chevron1" class="glyphicon glyphicon-chevron-up" onclick="hideORshow(this.id,'expand1')"></span>
+<span id="expand1" class="glyphicon glyphicon-chevron-down" onclick="hideORshow(this.id,'chevron1')"></span>
+</div>
+</div>
+</div>
+
+<div class="data-container lightblue-background">
+<div class="table1-row">
+<div class="table-tile cell-content" onclick="checksubfields('b',3)">
+<label class="container checkmark-lightblue"><span class="glyphicon glyphicon-euro"></span>63001700877
+  <input id="b" type="checkbox">
+  <span class="checkmark checkbox-white checkbox-lightblue-background"></span>
+</label>
+</div>
+<div class="table-tile image">
+<span id="chevron2" class="glyphicon glyphicon-chevron-up" onclick="expand2(this.id,'expand2')"></span>
+<span id="expand2" class="glyphicon glyphicon-chevron-down" onclick="chevron2(this.id,'chevron2')"></span>
+</div>
+</div>
+</div>
+
+<div id="expand2-option1" class="data-container white-background">
+<div class="table-row row-border">
+<label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> 
+<div class="table-tile cell-content"><div class="text-reduce">Najmola M sa sadeeaef</div>
+<div style="color:#989696;">3900200180</div></div>
+<div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+  <div class="table-tile"><input id="b1" type="checkbox">
+  <span class="checkmark checkbox-gray"></span></div>
+</label>
+
+</div>
+</div>
+
+<div id="expand2-option2" class="data-container white-background">
+<div class="table-row row-border">
+<label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> <div class="table-tile cell-content">
+<div class="text-reduce">Najmola M sa sadeeaef</div>
+<div style="color:#989696;">3900200180</div>
+</div>
+<div class="table-tile cell-content"><span class="fas fa-circle icon-red"></span></div>
+  <div class="table-tile"><input id="b2" type="checkbox">
+  <span class="checkmark checkbox-gray"></span></div>
+</label>
+
+</div>
+</div>
+
+<div id="expand2-option3" class="data-container white-background">
+<div class="table-row row-border">
+<label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> <div class="table-tile cell-content">
+<div class="text-reduce">Najmola M sa sadeeaef</div>
+<div style="color:#989696;">3900200180</div>
+</div>
+<div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+  <div class="table-tile"><input id="b3" type="checkbox">
+  <span class="checkmark checkbox-gray"></span></div>
+</label>
+
+</div>
+</div>
+
+<div class="data-container lightblue-background">
+<div class="table1-row">
+<div class="table-tile cell-content"  onclick="checksubfields('c',6)">
+<label class="container checkmark-lightblue"><span class="glyphicon glyphicon-euro"></span>63001700877
+  <input id="c" type="checkbox">
+  <span class="checkmark checkbox-white checkbox-lightblue-background"></span>
+</label>
+</div>
+<div class="table-tile image">
+<span id="chevron3" class="glyphicon glyphicon-chevron-up" onclick="expand3(this.id,'expand3')"></span>
+<span id="expand3" class="glyphicon glyphicon-chevron-down" onclick="chevron3(this.id,'chevron3')"></span>
+</div>
+</div>
+</div>
+
+<div id="expand3-option1" class="data-container white-background">
+<div class="table-row row-border">
+<label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> <div class="table-tile cell-content">
+<div class="text-reduce">Najmola M sa sadeeaef</div>
+<div style="color:#989696;">3900200180</div>
+</div>
+<div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+  <div class="table-tile"><input id="c1" type="checkbox">
+  <span class="checkmark checkbox-gray"></span></div>
+</label>
+
+</div>
+</div>
+
+<div id="expand3-option2" class="data-container white-background">
+<div class="table-row row-border">
+<label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> <div class="table-tile cell-content">
+<div class="text-reduce">Najmola M sa sadeeaef</div>
+<div style="color:#989696;">3900200180</div>
+</div>
+<div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+  <div class="table-tile"><input id="c2" type="checkbox">
+  <span class="checkmark checkbox-gray"></span></div>
+</label>
+
+</div>
+</div>
+
+<div id="expand3-option3" class="data-container white-background">
+<div class="table-row row-border">
+<label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> <div class="table-tile cell-content">
+<div class="text-reduce">Najmola M sa sadeeaef</div>
+<div style="color:#989696;">3900200180</div>
+</div>
+<div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+  <div class="table-tile"><input id="c3" type="checkbox">
+  <span class="checkmark checkbox-gray"></span></div>
+</label>
+
+</div>
+</div>
+<div id="expand3-option4" class="data-container white-background">
+<div class="table-row row-border">
+<label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> <div class="table-tile cell-content">
+<div class="text-reduce">Najmola M sa sadeeaef</div>
+<div style="color:#989696;">3900200180</div>
+</div>
+<div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+  <div class="table-tile"><input id="c4" type="checkbox">
+  <span class="checkmark checkbox-gray"></span></div>
+</label>
+
+</div>
+</div>
+
+<div id="expand3-option5" class="data-container white-background">
+<div class="table-row row-border">
+<label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> 
+<div class="table-tile cell-content">
+<div class="text-reduce">Najmola M sa sadeeaef</div>
+<div style="color:#989696;">3900200180</div>
+</div>
+<div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+  <div class="table-tile"><input id="c5" type="checkbox">
+  <span class="checkmark checkbox-gray"></span></div>
+</label>
+
+</div>
+</div>
+
+<div id="expand3-option6" class="data-container white-background">
+<div class="table-row row-border">
+  <label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> 
+    <div class="table-tile cell-content">
+    <div class="text-reduce">Najmola M sa sadeeaef</div>
+    <div style="color:#989696;">3900200180</div>
+    </div>
+    <div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+      <div class="table-tile"><input id="c6" type="checkbox">
+      <span class="checkmark checkbox-gray"></span></div>
+    </label>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="column middle">
+<div class="container-centre">
+  <div class="text-pink">Tarifa
+  <span class="fas fa-angle-double-up align-right"></span>
+  <span class="fas fa-columns align-right"></span>
+  <span class="fab fa-sistrix align-right"></span>
+  </div>
+  <div class="fadedScroller height530">
+  <div class="gray-background">
+  <div class="box-container">
+  <select>
+  <option>Najbolja M Sa Magenta 1 pogodnostima</option>
+  </select>
+  <span class="glyphicon glyphicon-menu-down icon-select"></span>
+  </div>
+  <div class="box2">
+  <div class="list-item">
+      <input type='checkbox' id='checkbox-1' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-1' class='fancy-checkbox-label'>
+          Resursi mobilne linije
+      </label>
+  </div>
+  <div class="list-item border17">
+    <input type='checkbox' id='checkbox-2' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-2' class='fancy-checkbox-label'>
+          Sigurno surfanje
+      </label>
+  </div>
+  <div class="list-item">
+    <input type='checkbox' id='checkbox-3' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-3' class='fancy-checkbox-label'>
+          Sigurno surfanje 1 GB
+      </label>
+  </div>
+  <div class="list-item">
+      <input type='checkbox' id='checkbox-4' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-4' class='fancy-checkbox-label'>
+          Resursi mobilne linije
+      </label>
+  </div>
+  <div class="list-item border17">
+    <input type='checkbox' id='checkbox-5' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-5' class='fancy-checkbox-label'>
+          Sigurno surfanje
+      </label>
+  </div>
+  <div class="list-item">
+    <input type='checkbox' id='checkbox-6' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-6' class='fancy-checkbox-label'>
+          Sigurno surfanje 1 GB
+      </label>
+  </div>
+  
+  <div class="list-item">
+      <input type='checkbox' id='checkbox-7' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-7' class='fancy-checkbox-label'>
+          Resursi mobilne linije
+      </label>
+  </div>
+  <div class="list-item border17">
+    <input type='checkbox' id='checkbox-8' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-8' class='fancy-checkbox-label'>
+          Sigurno surfanje
+      </label>
+  </div>
+  <div class="list-item">
+    <input type='checkbox' id='checkbox-9' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-9' class='fancy-checkbox-label'>
+          Sigurno surfanje 1 GB
+      </label>
+  </div>
+  <div class="list-item margin0">
+      <input type='checkbox' id='checkbox-10' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-10' class='fancy-checkbox-label'>
+          Resursi mobilne linije
+      </label>
+  </div>
+  <div class="list-item border17 margin0">
+    <input type='checkbox' id='checkbox-11' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-11' class='fancy-checkbox-label'>
+          Sigurno surfanje
+      </label>
+  </div>
+  </div>
+  </div>
+  <div class="text-blue">Pogonosti
+  <i id="chevron21" class="glyphicon glyphicon-chevron-down icon-gray align-right" onclick="expand(this.id,'expand21','division1','block')"></i>
+  <i id="expand21" class="glyphicon glyphicon-chevron-up icon-gray align-right" onclick="expand(this.id,'chevron21','division1','none')"></i>
+  </div>
+  <div class="gray-background" id="division1">
+  <div class="box2">
+  <div class="list-item">
+      <input type='checkbox' id='checkbox-21' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-21' class='fancy-checkbox-label'>
+          Resursi mobilne linije
+      </label>
+  </div>
+  <div class="list-item border17">
+    <input type='checkbox' id='checkbox-22' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-22' class='fancy-checkbox-label'>
+          Sigurno surfanje
+      </label>
+  </div>
+  <div class="list-item">
+    <input type='checkbox' id='checkbox-23' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-23' class='fancy-checkbox-label'>
+          Sigurno surfanje 1 GB
+      </label>
+  </div>
+  <div class="list-item margin0">
+      <input type='checkbox' id='checkbox-24' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-24' class='fancy-checkbox-label'>
+          Resursi mobilne linije
+      </label>
+  </div>
+  <div class="list-item border17 margin0">
+    <input type='checkbox' id='checkbox-25' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-25' class='fancy-checkbox-label'>
+          Sigurno surfanje
+      </label>
+  </div>
+  <div class="list-item margin0">
+    <input type='checkbox' id='checkbox-26' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-26' class='fancy-checkbox-label'>
+          Sigurno surfanje 1 GB
+      </label>
+  </div>
+  </div>
+  </div>
+  <div class="text-blue">Pogonosti
+  <i id="chevron22" class="glyphicon glyphicon-chevron-down icon-gray align-right" onclick="expand(this.id,'expand22','division2','block')"></i>
+  <i id="expand22" class="glyphicon glyphicon-chevron-up icon-gray align-right" onclick="expand(this.id,'chevron22','division2','none')"></i>
+  </div>
+  <div class="gray-background" id="division2">
+  <div class="box2">
+  <div class="list-item">
+      <input type='checkbox' id='checkbox-31' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-31' class='fancy-checkbox-label'>
+          Resursi mobilne linije
+      </label>
+  </div>
+  <div class="list-item border17">
+    <input type='checkbox' id='checkbox-32' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-32' class='fancy-checkbox-label'>
+          Sigurno surfanje
+      </label>
+  </div>
+  <div class="list-item">
+    <input type='checkbox' id='checkbox-33' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-33' class='fancy-checkbox-label'>
+          Sigurno surfanje 1 GB
+      </label>
+  </div>
+  <div class="list-item margin0">
+      <input type='checkbox' id='checkbox-34' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-34' class='fancy-checkbox-label'>
+          Resursi mobilne linije
+      </label>
+  </div>
+  <div class="list-item border17 margin0">
+    <input type='checkbox' id='checkbox-35' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-35' class='fancy-checkbox-label'>
+          Sigurno surfanje
+      </label>
+  </div>
+  <div class="list-item margin0">
+    <input type='checkbox' id='checkbox-36' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-36' class='fancy-checkbox-label'>
+          Sigurno surfanje 1 GB
+      </label>
+  </div>
+  </div>
+  </div>
+  <div class="text-blue">Pogonosti
+  <i id="chevron23" class="glyphicon glyphicon-chevron-down icon-gray align-right" onclick="expand(this.id,'expand23','division3','block')"></i>
+  <i id="expand23" class="glyphicon glyphicon-chevron-up icon-gray align-right" onclick="expand(this.id,'chevron23','division3','none')"></i>
+  </div>
+  <div class="gray-background" id="division3">
+  <div class="box2">
+  <div class="list-item">
+      <input type='checkbox' id='checkbox-41' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-41' class='fancy-checkbox-label'>
+          Resursi mobilne linije
+      </label>
+  </div>
+  <div class="list-item border17">
+    <input type='checkbox' id='checkbox-42' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-42' class='fancy-checkbox-label'>
+          Sigurno surfanje
+      </label>
+  </div>
+  <div class="list-item">
+    <input type='checkbox' id='checkbox-43' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-43' class='fancy-checkbox-label'>
+          Sigurno surfanje 1 GB
+      </label>
+  </div>
+  <div class="list-item margin0">
+      <input type='checkbox' id='checkbox-44' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-44' class='fancy-checkbox-label'>
+          Resursi mobilne linije
+      </label>
+  </div>
+  <div class="list-item border17 margin0">
+    <input type='checkbox' id='checkbox-45' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-45' class='fancy-checkbox-label'>
+          Sigurno surfanje
+      </label>
+  </div>
+  <div class="list-item margin0">
+    <input type='checkbox' id='checkbox-46' class='pseudo-checkbox sr-only'/>
+      <label for='checkbox-46' class='fancy-checkbox-label'>
+          Sigurno surfanje 1 GB
+      </label>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="fadedScroller_fade"></div>
+  </div>
+</div>
+<div class="column right">
+    <div class="rightbox">
+        <div class="data-container">
+          <div class="table-row padding5">
+            <span class="fas fa-angle-double-up align-right"></span>
+            <span class="fab fa-sistrix align-right"></span>
+          </div>
+        </div>
+        <div id="noScroller" class="noScroller">
+        <div class="margin5">
+        <div class="row1">Tarifa
+          <i id="menudown31" class="glyphicon glyphicon glyphicon-menu-down align-right"
+            onclick="expand(this.id,'menuup31','division31','block')"></i>
+          <i id="menuup31" class="glyphicon glyphicon-menu-up align-right"
+            onclick="expand(this.id,'menudown31','division31','none')"></i>
+        </div>
+        <div id="division31" class="sidebox-container gray-background">
+          <div class="pink-color">OTPO</div>
+          <select class="select2">
+            <option>12 mjeseci</option>
+          </select>
+          <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+          <div class="pink-color text-reduce">Zebrana odlaznih i dolaznih usluga u roaming</div>
+          <select class="select2">
+            <option>-</option>
+          </select>
+          <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+        </div>
+      </div>
+      <div class="margin5">
+        <div class="row1 darkgray-background">Tarifa
+            <i id="menudown32" class="glyphicon glyphicon glyphicon-menu-down align-right"
+              onclick="expand(this.id,'menuup32','division32','block')"></i>
+            <i id="menuup32" class="glyphicon glyphicon-menu-up align-right"
+              onclick="expand(this.id,'menudown32','division32','none')"></i>
+          </div>
+          <div id="division32" class="sidebox-container gray-background">
+            <div class="pink-color">OTPO</div>
+            <select class="select2">
+              <option>12 mjeseci</option>
+            </select>
+            <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+            <div class="pink-color text-reduce">Zebrana odlaznih i dolaznih usluga u roaming</div>
+            <select class="select2">
+              <option>-</option>
+            </select>
+            <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+          </div>
+        </div>
+        <div class="margin5">
+            <div class="row1 darkgray-background">Tarifa
+                <i id="menudown33" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                  onclick="expand(this.id,'menuup33','division33','block')"></i>
+                <i id="menuup33" class="glyphicon glyphicon-menu-up align-right"
+                  onclick="expand(this.id,'menudown33','division33','none')"></i>
+              </div>
+              <div id="division33" class="sidebox-container gray-background">
+                <div class="pink-color">OTPO</div>
+                <select class="select2">
+                  <option>12 mjeseci</option>
+                </select>
+                <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                <div class="pink-color text-reduce">Zebrana odlaznih i dolaznih usluga u roaming</div>
+                <select class="select2">
+                  <option>-</option>
+                </select>
+                <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+              </div>
+            </div>
+            <div class="margin5">
+                <div class="row1 darkgray-background">Tarifa
+                    <i id="menudown34" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                      onclick="expand(this.id,'menuup34','division34','block')"></i>
+                    <i id="menuup34" class="glyphicon glyphicon-menu-up align-right"
+                      onclick="expand(this.id,'menudown34','division34','none')"></i>
+                  </div>
+                  <div id="division34" class="sidebox-container gray-background">
+                    <div class="pink-color">OTPO</div>
+                    <select class="select2">
+                      <option>12 mjeseci</option>
+                    </select>
+                    <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                    <div class="pink-color text-reduce">Zebrana odlaznih i dolaznih usluga u roaming</div>
+                    <select class="select2">
+                      <option>-</option>
+                    </select>
+                    <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                  </div>
+                </div>
+                <div class="margin5">
+                    <div class="row1 lightblue-background">Tarifa
+                        <i id="menudown35" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                          onclick="expand(this.id,'menuup35','division35','block')"></i>
+                        <i id="menuup35" class="glyphicon glyphicon-menu-up align-right"
+                          onclick="expand(this.id,'menudown35','division35','none')"></i>
+                      </div>
+                      <div id="division35" class="sidebox-container gray-background">
+                        <div class="pink-color">OTPO</div>
+                        <select class="select2">
+                          <option>12 mjeseci</option>
+                        </select>
+                        <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                        <div class="pink-color text-reduce">Zebrana odlaznih i dolaznih usluga u roaming</div>
+                        <select class="select2">
+                          <option>-</option>
+                        </select>
+                        <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                      </div>
+                    </div>
+                    <div class="margin5">
+                        <div class="row1 darkgray-background">Tarifa
+                            <i id="menudown36" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                              onclick="expand(this.id,'menuup36','division36','block')"></i>
+                            <i id="menuup36" class="glyphicon glyphicon-menu-up align-right"
+                              onclick="expand(this.id,'menudown36','division36','none')"></i>
+                          </div>
+                          <div id="division36" class="sidebox-container gray-background">
+                            <div class="pink-color">OTPO</div>
+                            <select class="select2">
+                              <option>12 mjeseci</option>
+                            </select>
+                            <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                            <div class="pink-color text-reduce">Zebrana odlaznih i dolaznih usluga u roaming</div>
+                            <select class="select2">
+                              <option>-</option>
+                            </select>
+                            <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                            <div class="pink-color">OTPO</div>
+                            <select class="select2">
+                              <option>12 mjeseci</option>
+                            </select>
+                            <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                          </div>
+                        </div>
+                      </div>
+                        <div class="noScroller_fade"></div>
+                      </div>
+  </div>
+</div>
+<script>
+
+function hideORshow(id,id2){
+	document.getElementById(id).style.display = "none";
+	document.getElementById(id2).style.display = "block";
+}
+
+function expand2(id1,id2)
+{
+	hideORshow(id1,id2);
+	document.getElementById("expand2-option1").style.display = "block";
+	document.getElementById("expand2-option2").style.display = "block";
+	document.getElementById("expand2-option3").style.display = "block";
+}
+
+function chevron2(id1,id2)
+{
+	hideORshow(id1,id2);
+	document.getElementById("expand2-option1").style.display = "none";
+	document.getElementById("expand2-option2").style.display = "none";
+	document.getElementById("expand2-option3").style.display = "none";
+}
+function expand3(id1,id2)
+{
+	hideORshow(id1,id2);
+	document.getElementById("expand3-option1").style.display = "block";
+	document.getElementById("expand3-option2").style.display = "block";
+	document.getElementById("expand3-option3").style.display = "block";
+	document.getElementById("expand3-option4").style.display = "block";
+	document.getElementById("expand3-option5").style.display = "block";
+	document.getElementById("expand3-option6").style.display = "block";
+}
+
+function chevron3(id1,id2)
+{
+	hideORshow(id1,id2);
+	document.getElementById("expand3-option1").style.display = "none";
+	document.getElementById("expand3-option2").style.display = "none";
+	document.getElementById("expand3-option3").style.display = "none";
+	document.getElementById("expand3-option4").style.display = "none";
+	document.getElementById("expand3-option5").style.display = "none";
+	document.getElementById("expand3-option6").style.display = "none";
+}
+
+function checksubfields(id,subid){
+
+if(document.getElementById(id).checked == true)
+{
+var i;
+for(i=1;i<=subid;i++){
+	document.getElementById(id+i).checked = true;
+}
+}
+else
+{
+	var i;
+for(i=1;i<=subid;i++){
+	document.getElementById(id+i).checked = false;
+}
+}
+}
+
+function expand(id1,id2,divId,action){
+	hideORshow(id1,id2);
+	document.getElementById(divId).style.display = action;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,723 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\sruthi.a.PRODAPT\Desktop\dt\css\header.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\sruthi.a.PRODAPT\Desktop\dt\css\breadcrumb.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\sruthi.a.PRODAPT\Desktop\dt\css\content.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row title"  style="background-color: white;">
+            <div class="col-md-2 col-sm-6">
+                <div class="header">Tip documenta</div>
+                <div class="headertext">Zahtjev</div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="header">Zeljeni datum realizacije</div>
+                <div class="headertext">02.10.2019</div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="header">Datum prodaje</div>
+                <div class="headertext">02.10.2019</div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="header">Prodao</div>
+                <div class="headertext">Luka Kristof</div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="header">Rola</div>
+                <div class="headertext">OM_Interno</div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="header">Nacin sporuke</div>
+                <div class="headertext">Direktno</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row flat">
+                    <a href="#" class="first active">OSNOVNA KONFIGURACIJA</a>
+                    <a href="#" class="middle">OPCIJE</a>
+                    <a href="#" class="first">DODATNE USLUGE</a>
+                    <a href="#" class="first">SAZETAK</a>
+                    <a href="#" class="last">BA VALIDACIJAK</a>
+                    <a href="#" class="last">CREDIT SCORING</a>
+                    <a href="#" class="last">SAP/TRGO DOSTAVNICA</a>
+                    <a href="#" class="last">ISPIS / POTPIS</a>
+    </div>        
+
+    <div class="row centercontent">
+            <div class="col-xs-3">
+                            <div class="sidebox">
+                            <div class="data-container">
+                            <div class="table1-row padding5">
+                            <span class="glyphicon glyphicon-menu-left"></span>
+                            <span class="fas fa-angle-double-up align-right"></span>
+                            <span class="fab fa-sistrix align-right"></span>
+                            </div>
+                            </div>
+                            
+                            <div class="">
+                            <div class="data-container darkblue-background">
+                            <div class="table1-row">
+                            <div class="table-tile cell-content">
+                            <label class="container checkmark-darkblue"><span class="glyphicon glyphicon-user"></span>
+                            Single precculici
+                              <input type="checkbox">
+                              <span class="checkmark checkbox-white"></span>
+                            </label>
+                            </div>
+                            <div class="table-tile image">
+                            <span class="fa fa-circle-o"></span></div>
+                            <div class="table-tile image">
+                            <span id="chevron1" class="fa fa-angle-up" onclick="hideORshow(this.id,'expand1')"></span>
+                            <span id="expand1" class="fa fa-angle-down" onclick="hideORshow(this.id,'chevron1')"></span>
+                            </div>
+                            </div>
+                            </div>
+                            
+                            <div class="data-container lightblue-background">
+                            <div class="table1-row">
+                            <div class="table-tile cell-content" onclick="checksubfields('b',3)">
+                            <label class="container checkmark-lightblue"><span class="glyphicon glyphicon-euro"></span>63001700877
+                              <input id="b" type="checkbox">
+                              <span class="checkmark checkbox-white checkbox-lightblue-background"></span>
+                            </label>
+                            </div>
+                            <div class="table-tile image">
+                            <span id="chevron2" class="fa fa-angle-up" onclick="expand2(this.id,'expand2')"></span>
+                            <span id="expand2" class="fa fa-angle-down" onclick="chevron2(this.id,'chevron2')"></span>
+                            </div>
+                            </div>
+                            </div>
+                            
+                            <div id="expand2-option1" class="data-container white-background">
+                            <div class="table-row row-border">
+                            <label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> 
+                            <div class="table-tile cell-content"><div class="text-reduce">Najmola M sa sadeeaef</div>
+                            <div style="color:#989696;">3900200180</div></div>
+                            <div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+                              <div class="table-tile"><input id="b1" type="checkbox">
+                              <span class="checkmark checkbox-gray"></span></div>
+                            </label>
+                            
+                            </div>
+                            </div>
+                            
+                            <div id="expand2-option2" class="data-container white-background">
+                            <div class="table-row row-border">
+                            <label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> <div class="table-tile cell-content">
+                            <div class="text-reduce">Najmola M sa sadeeaef</div>
+                            <div style="color:#989696;">3900200181</div>
+                            </div>
+                            <div class="table-tile cell-content"><span class="fas fa-circle icon-red"></span></div>
+                              <div class="table-tile"><input id="b2" type="checkbox">
+                              <span class="checkmark checkbox-gray"></span></div>
+                            </label>
+                            
+                            </div>
+                            </div>
+                            
+                            <div id="expand2-option3" class="data-container white-background">
+                            <div class="table-row row-border">
+                            <label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> <div class="table-tile cell-content">
+                            <div class="text-reduce">Najmola M sa sadeeaef</div>
+                            <div style="color:#989696;">3900200182</div>
+                            </div>
+                            <div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+                              <div class="table-tile"><input id="b3" type="checkbox">
+                              <span class="checkmark checkbox-gray"></span></div>
+                            </label>
+                            
+                            </div>
+                            </div>
+                            
+                            <div class="data-container lightblue-background">
+                            <div class="table1-row">
+                            <div class="table-tile cell-content"  onclick="checksubfields('c',6)">
+                            <label class="container checkmark-lightblue"><span class="glyphicon glyphicon-euro"></span>63001700877
+                              <input id="c" type="checkbox">
+                              <span class="checkmark checkbox-white checkbox-lightblue-background"></span>
+                            </label>
+                            </div>
+                            <div class="table-tile image">
+                            <span id="chevron3" class="fa fa-angle-up" onclick="expand3(this.id,'expand3')"></span>
+                            <span id="expand3" class="fa fa-angle-down" onclick="chevron3(this.id,'chevron3')"></span>
+                            </div>
+                            </div>
+                            </div>
+                            
+                            <div id="expand3-option1" class="data-container white-background">
+                            <div class="table-row row-border">
+                            <label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> <div class="table-tile cell-content">
+                            <div class="text-reduce">Najmola M sa sadeeaef</div>
+                            <div style="color:#989696;">3900200183</div>
+                            </div>
+                            <div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+                              <div class="table-tile"><input id="c1" type="checkbox">
+                              <span class="checkmark checkbox-gray"></span></div>
+                            </label>
+                            
+                            </div>
+                            </div>
+                            
+                            <div id="expand3-option2" class="data-container white-background">
+                            <div class="table-row row-border">
+                            <label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> <div class="table-tile cell-content">
+                            <div class="text-reduce">Najmola M sa sadeeaef</div>
+                            <div style="color:#989696;">3900200184</div>
+                            </div>
+                            <div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+                              <div class="table-tile"><input id="c2" type="checkbox">
+                              <span class="checkmark checkbox-gray"></span></div>
+                            </label>
+                            
+                            </div>
+                            </div>
+                            
+                            <div id="expand3-option3" class="data-container white-background">
+                            <div class="table-row row-border">
+                            <label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> <div class="table-tile cell-content">
+                            <div class="text-reduce">Najmola M sa sadeeaef</div>
+                            <div style="color:#989696;">3900200185</div>
+                            </div>
+                            <div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+                              <div class="table-tile"><input id="c3" type="checkbox">
+                              <span class="checkmark checkbox-gray"></span></div>
+                            </label>
+                            
+                            </div>
+                            </div>
+                            <div id="expand3-option4" class="data-container white-background">
+                            <div class="table-row row-border">
+                            <label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> <div class="table-tile cell-content">
+                            <div class="text-reduce">Najmola M sa sadeeaef</div>
+                            <div style="color:#989696;">3900200186</div>
+                            </div>
+                            <div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+                              <div class="table-tile"><input id="c4" type="checkbox">
+                              <span class="checkmark checkbox-gray"></span></div>
+                            </label>
+                            
+                            </div>
+                            </div>
+                            
+                            <div id="expand3-option5" class="data-container white-background">
+                            <div class="table-row row-border">
+                            <label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> 
+                            <div class="table-tile cell-content">
+                            <div class="text-reduce">Najmola M sa sadeeaef</div>
+                            <div style="color:#989696;">3900200187</div>
+                            </div>
+                            <div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+                              <div class="table-tile"><input id="c5" type="checkbox">
+                              <span class="checkmark checkbox-gray"></span></div>
+                            </label>
+                            
+                            </div>
+                            </div>
+                            
+                            <div id="expand3-option6" class="data-container white-background">
+                            <div class="table-row row-border">
+                              <label class="container checkmark-white"><div class="table-tile icon-gray"><span class="glyphicon glyphicon-phone"></span></div> 
+                                <div class="table-tile cell-content">
+                                <div class="text-reduce">Najmola M sa sadeeaef</div>
+                                <div style="color:#989696;">3900200188</div>
+                                </div>
+                                <div class="table-tile cell-content"><span class="fas fa-circle icon-green"></span></div>
+                                  <div class="table-tile"><input id="c6" type="checkbox">
+                                  <span class="checkmark checkbox-gray"></span></div>
+                                </label>
+                            </div>
+                            </div>
+                            
+                            </div>
+                            </div>
+            </div>
+            <div class="col-xs-9">
+                <div class="">
+                            <div class="col-xs-12" style="margin-left: 5px;margin-top: 7px;">
+                                <div class="newdiv">
+                                <span style="color:#ff1a8c;font-weight:bold;">3859922000581</span>
+                                <span>Najbolja M sa Magenta 1 pogodnostima</span>
+                                <span style="float: right;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                                <span style="float: right;"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                            <!--<div class="col-xs-2 col-xs-2">
+                                <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                                <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                            </div>-->                  
+                            <div class="col-xs-9">
+                                    <div class="container-centre">
+                                      <div class="text-pink">Tarifa
+                                      <span class="fas fa-angle-double-up align-right"></span>
+                                      <span class="fas fa-columns align-right"></span>
+                                      <span class="fab fa-sistrix align-right"></span>
+                                      </div>
+                                      <div class="fadedScroller height530">
+                                      <div class="gray-background">
+                                      <div class="box-container">
+                                      <select class="selectwidth">
+                                      <option class="elipsis">Najbolja M Sa Magenta 1 pogodnostima</option>
+                                      </select>
+                                      <span class="glyphicon glyphicon-menu-down icon-select iconpos"></span>
+                                      </div>
+                                      <div class="box2 row">
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                          <input type='checkbox' id='checkbox-1' class='pseudo-checkbox sr-only' onclick="show('division32')"/>
+                                          <label for='checkbox-1' class='form-control fancy-checkbox-label'>
+                                              Resursi mobilne linije
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4  col-sm-6">
+                                        <input type='checkbox' id='checkbox-2' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-2' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4  col-sm-6">
+                                        <input type='checkbox' id='checkbox-3' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-3' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje 1 GB
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4  col-sm-6">
+                                          <input type='checkbox' id='checkbox-4' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-4' class='form-control fancy-checkbox-label'>
+                                              Resursi mobilne linije
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4  col-sm-6">
+                                        <input type='checkbox' id='checkbox-5' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-5' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4  col-sm-6">
+                                        <input type='checkbox' id='checkbox-6' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-6' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje 1 GB
+                                          </label>
+                                      </div>
+                                      
+                                      <div class="list-item col-xs-4  col-sm-6">
+                                          <input type='checkbox' id='checkbox-7' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-7' class='form-control fancy-checkbox-label'>
+                                              Resursi mobilne linije
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4  col-sm-6">
+                                        <input type='checkbox' id='checkbox-8' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-8' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4  col-sm-6">
+                                        <input type='checkbox' id='checkbox-9' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-9' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje 1 GB
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4  col-sm-6">
+                                          <input type='checkbox' id='checkbox-10' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-10' class='form-control fancy-checkbox-label'>
+                                              Resursi mobilne linije
+                                          </label>
+                                      </div>
+                                      <div class="list-item  col-xs-4  col-sm-6">
+                                        <input type='checkbox' id='checkbox-11' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-11' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje
+                                          </label>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <div class="text-blue">Pogodnosti
+                                      <i id="chevron21" class="fa fa-angle-up icon-gray align-right" onclick="expand(this.id,'expand21','division1','block')"></i>
+                                      <i id="expand21" class="glyphicon glyphicon-chevron-up icon-gray align-right" onclick="expand(this.id,'chevron21','division1','none')"></i>
+                                      </div>
+                                      <div class="gray-background" id="division1">
+                                      <div class="box2 row">
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                          <input type='checkbox' id='checkbox-21' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-21' class='form-control fancy-checkbox-label'>
+                                              Resursi mobilne linije
+                                          </label>
+                                      </div>
+                                      <div class="list-item  col-xs-4 col-sm-6">
+                                        <input type='checkbox' id='checkbox-22' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-22' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje
+                                          </label>
+                                      </div>
+                                      <div class="list-item  col-xs-4 col-sm-6">
+                                        <input type='checkbox' id='checkbox-23' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-23' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje 1 GB
+                                          </label>
+                                      </div>
+                                      <div class="list-item  col-xs-4 col-sm-6">
+                                          <input type='checkbox' id='checkbox-24' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-24' class='form-control fancy-checkbox-label'>
+                                              Resursi mobilne linije
+                                          </label>
+                                      </div>
+                                      <div class="list-item  col-xs-4 col-sm-6">
+                                        <input type='checkbox' id='checkbox-25' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-25' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje
+                                          </label>
+                                      </div>
+                                      <div class="list-item  col-xs-4 col-sm-6">
+                                        <input type='checkbox' id='checkbox-26' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-26' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje 1 GB
+                                          </label>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <div class="text-blue">Popusti
+                                      <i id="chevron22" class="fa fa-angle-up icon-gray align-right" onclick="expand(this.id,'expand22','division2','block')"></i>
+                                      <i id="expand22" class="glyphicon glyphicon-chevron-up icon-gray align-right" onclick="expand(this.id,'chevron22','division2','none')"></i>
+                                      </div>
+                                      <div class="gray-background" id="division2">
+                                      <div class="box2">
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                          <input type='checkbox' id='checkbox-31' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-31' class='form-control fancy-checkbox-label'>
+                                              Resursi mobilne linije
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                        <input type='checkbox' id='checkbox-32' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-32' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                        <input type='checkbox' id='checkbox-33' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-33' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje 1 GB
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                          <input type='checkbox' id='checkbox-34' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-34' class='form-control fancy-checkbox-label'>
+                                              Resursi mobilne linije
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                        <input type='checkbox' id='checkbox-35' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-35' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                        <input type='checkbox' id='checkbox-36' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-36' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje 1 GB
+                                          </label>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <div class="text-blue">Servisi
+                                      <i id="chevron23" class="fa fa-angle-up icon-gray align-right" onclick="expand(this.id,'expand23','division3','block')"></i>
+                                      <i id="expand23" class="glyphicon glyphicon-chevron-up icon-gray align-right" onclick="expand(this.id,'chevron23','division3','none')"></i>
+                                      </div>
+                                      <div class="gray-background" id="division3">
+                                      <div class="box2">
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                          <input type='checkbox' id='checkbox-41' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-41' class='form-control fancy-checkbox-label'>
+                                              Resursi mobilne linije
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                        <input type='checkbox' id='checkbox-42' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-42' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                        <input type='checkbox' id='checkbox-43' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-43' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje 1 GB
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                          <input type='checkbox' id='checkbox-44' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-44' class='form-control fancy-checkbox-label'>
+                                              Resursi mobilne linije
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                        <input type='checkbox' id='checkbox-45' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-45' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje
+                                          </label>
+                                      </div>
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                        <input type='checkbox' id='checkbox-46' class='pseudo-checkbox sr-only'/>
+                                          <label for='checkbox-46' class='form-control fancy-checkbox-label'>
+                                              Sigurno surfanje 1 GB
+                                          </label>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <div class="fadedScroller_fade"></div>
+                                    </div>
+    
+    
+                    </div>
+                    <div class="col-xs-3">
+                            <div class="rightbox">
+                                <div class="data-container">
+                                  <div class="table-row padding5">
+                                    <span class="fas fa-angle-double-up align-right"></span>
+                                    <span class="fab fa-sistrix align-right"></span>
+                                  </div>
+                                </div>
+                                <div id="noScroller" class="noScroller">
+                                <div class="margin5">
+                                <div class="row1">Tarifa
+                                  <i id="menudown31" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                                    onclick="expand(this.id,'menuup31','division31','block')"></i>
+                                  <i id="menuup31" class="glyphicon glyphicon-menu-up align-right"
+                                    onclick="expand(this.id,'menudown31','division31','none')"></i>
+                                </div>
+                                <div id="division31" class="sidebox-container gray-background">
+                                  <div class="pink-color">OTPO</div>
+                                  <select class="select2">
+                                    <option>12 mjeseci</option>
+                                  </select>
+                                  <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                  <div class="pink-color text-reduce">Zebrana odlaznih i dolaznih usluga u roaming</div>
+                                  <select class="select2">
+                                    <option>-</option>
+                                  </select>
+                                  <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                </div>
+                              </div>
+                              <div class="margin5">
+                                <div class="row1 darkgray-background">Resursi mobilne linije
+                                    <i id="menudown32" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                                      onclick="expand(this.id,'menuup32','division32','block')"></i>
+                                    <i id="menuup32" class="glyphicon glyphicon-menu-up align-right"
+                                      onclick="expand(this.id,'menudown32','division32','none')"></i>
+                                  </div>
+                                  <div id="division32" class="sidebox-container gray-background">
+                                    <div class="pink-color">karaktenstika 1 </div>
+                                    <select class="select2">
+                                      <option>12 mjeseci</option>
+                                    </select>
+                                    <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                    <div class="pink-color text-reduce">karaktenstika 2</div>
+                                    <select class="select2">
+                                      <option>-</option>
+                                    </select>
+                                    <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                  </div>
+                                </div>
+                                <div class="margin5">
+                                    <div class="row1 darkgray-background">SPH 1
+                                        <i id="menudown33" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                                          onclick="expand(this.id,'menuup33','division33','block')"></i>
+                                        <i id="menuup33" class="glyphicon glyphicon-menu-up align-right"
+                                          onclick="expand(this.id,'menudown33','division33','none')"></i>
+                                      </div>
+                                      <div id="division33" class="sidebox-container gray-background">
+                                        <div class="pink-color">karaktenstika 1                                                                                                                                                                                                                                                                                                                                                                                                                                                      </div>
+                                        <select class="select2">
+                                          <option>12 mjeseci</option>
+                                        </select>
+                                        <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                        <div class="pink-color text-reduce">Karaktenstika 2</div>
+                                        <select class="select2">
+                                          <option>-</option>
+                                        </select>
+                                        <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                      </div>
+                                    </div>
+                                    <div class="margin5">
+                                        <div class="row1 darkgray-background">Osiguranje uredaja
+                                            <i id="menudown34" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                                              onclick="expand(this.id,'menuup34','division34','block')"></i>
+                                            <i id="menuup34" class="glyphicon glyphicon-menu-up align-right"
+                                              onclick="expand(this.id,'menudown34','division34','none')"></i>
+                                          </div>
+                                          <div id="division34" class="sidebox-container gray-background">
+                                            <div class="pink-color">OTPO</div>
+                                            <select class="select2">
+                                              <option>12 mjeseci</option>
+                                            </select>
+                                            <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                            <div class="pink-color text-reduce">Zebrana odlaznih i dolaznih usluga u roaming</div>
+                                            <select class="select2">
+                                              <option>-</option>
+                                            </select>
+                                            <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                          </div>
+                                        </div>
+                                        <div class="margin5">
+                                            <div class="row1 lightblue-background">Pogodnosti
+                                                <i id="menudown35" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                                                  onclick="expand(this.id,'menuup35','division35','block')"></i>
+                                                <i id="menuup35" class="glyphicon glyphicon-menu-up align-right"
+                                                  onclick="expand(this.id,'menudown35','division35','none')"></i>
+                                              </div>
+                                              <div id="division35" class="sidebox-container gray-background">
+                                                <div class="pink-color">OTPO</div>
+                                                <select class="select2">
+                                                  <option>12 mjeseci</option>
+                                                </select>
+                                                <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                                <div class="pink-color text-reduce">Zebrana odlaznih i dolaznih usluga u roaming</div>
+                                                <select class="select2">
+                                                  <option>-</option>
+                                                </select>
+                                                <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                              </div>
+                                            </div>
+                                            <div class="margin5">
+                                                <div class="row1 darkgray-background">Najbolja obitelj
+                                                    <i id="menudown36" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                                                      onclick="expand(this.id,'menuup36','division36','block')"></i>
+                                                    <i id="menuup36" class="glyphicon glyphicon-menu-up align-right"
+                                                      onclick="expand(this.id,'menudown36','division36','none')"></i>
+                                                  </div>
+                                                  <div id="division36" class="sidebox-container gray-background">
+                                                    <div class="pink-color">Karaktenstika 1</div>
+                                                    <select class="select2">
+                                                      <option>12 mjeseci</option>
+                                                    </select>
+                                                    <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                                    <div class="pink-color text-reduce">Karaktenstika 2</div>
+                                                    <select class="select2">
+                                                      <option>-</option>
+                                                    </select>
+                                                    <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                                    <div class="pink-color">Karaktenstika 3</div>
+                                                    <select class="select2">
+                                                      <option>12 mjeseci</option>
+                                                    </select>
+                                                    <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                                <div class="noScroller_fade"></div>
+                                              </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+    
+        <div class="">
+                <div class="row elipsis"  style="background-color: white;">
+                    <div class="col-sm-4" style="padding-top:10px;">
+                       <!---<ul id="list">
+                        <li><button type="button" class="btn btn-secondary">Odustani</button>
+                        <li><button type="button" class="btn btn-outline-secondary">Spermi</button>
+                        <li><button type="button" class="btn btn-outline-secondary">i</button>
+                        <li><button type="button" class="btn btn-outline-secondary">$</button>
+                        </ul>-->
+                        <span><button type="button" class="btn btn-secondary">Odustani</button></span>
+                        <span><button type="button" class="btn btn-outline-secondary">Spermi</button></span>
+                        <span><button type="button" class="btn btn-outline-secondary">i</button></span>
+                        <span><button type="button" class="btn btn-outline-secondary">$</button></span>
+    
+                       </div>                       
+                             <div class="col-sm-2 ">
+                               <div class="elipsis">Jeorokratra naplata</div>
+                               <div class="kn elipsis">20,00 kn</div>
+                             </div>
+                             <div class="col-sm-2">
+                                <div class="elipsis" >Poravijajuca naciata</div>
+                                <div class="kn elipsis">169,00 kn</div>
+                            </div>     
+                            <div class="col-sm-2"></div>                     
+                        <div class="col-sm-2" style="padding-top:10px;">
+                        <div class="">
+                               <button type="button" class="btn btn-outline-secondary space"><i class="fa fa-chevron-left icon" aria-hidden="true"></i></button>
+                               <button type="button" class="btn btn-outline-secondary space"><i class="fa fa-chevron-right icon" aria-hidden="true"></i></button>
+                               <button type="button" class="btn pinkbtn space" >Zavrsi</button>
+                    </div>                         
+                        </div>
+                   </div>
+                </div>
+        <script>
+                function hideORshow(id,id2){
+                document.getElementById(id).style.display = "none";
+                document.getElementById(id2).style.display = "block";
+            }
+            function show(id){
+                document.getElementById(id).style.display = "block";   
+            }
+            function expand2(id1,id2)
+            {
+                hideORshow(id1,id2);
+                document.getElementById("expand2-option1").style.display = "block";
+                document.getElementById("expand2-option2").style.display = "block";
+                document.getElementById("expand2-option3").style.display = "block";
+            }
+            
+            function chevron2(id1,id2)
+            {
+                hideORshow(id1,id2);
+                document.getElementById("expand2-option1").style.display = "none";
+                document.getElementById("expand2-option2").style.display = "none";
+                document.getElementById("expand2-option3").style.display = "none";
+            }
+            function expand3(id1,id2)
+            {
+                hideORshow(id1,id2);
+                document.getElementById("expand3-option1").style.display = "block";
+                document.getElementById("expand3-option2").style.display = "block";
+                document.getElementById("expand3-option3").style.display = "block";
+                document.getElementById("expand3-option4").style.display = "block";
+                document.getElementById("expand3-option5").style.display = "block";
+                document.getElementById("expand3-option6").style.display = "block";
+            }
+            
+            function chevron3(id1,id2)
+            {
+                hideORshow(id1,id2);
+                document.getElementById("expand3-option1").style.display = "none";
+                document.getElementById("expand3-option2").style.display = "none";
+                document.getElementById("expand3-option3").style.display = "none";
+                document.getElementById("expand3-option4").style.display = "none";
+                document.getElementById("expand3-option5").style.display = "none";
+                document.getElementById("expand3-option6").style.display = "none";
+            }
+            
+            function checksubfields(id,subid){
+            
+            if(document.getElementById(id).checked == true)
+            {
+            var i;
+            for(i=1;i<=subid;i++){
+                document.getElementById(id+i).checked = true;
+            }
+            }
+            else
+            {
+                var i;
+            for(i=1;i<=subid;i++){
+                document.getElementById(id+i).checked = false;
+            }
+            }
+            }
+            
+            function expand(id1,id2,divId,action){
+                hideORshow(id1,id2);
+                document.getElementById(divId).style.display = action;
+            }
+            </script>
+</body>

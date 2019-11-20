@@ -13,6 +13,7 @@
 }
 body{
     background-color: #d9d9d9;
+
 }
 .title{
     margin:6px 2px 4px 6px;
@@ -32,9 +33,6 @@ select{
     margin-bottom: 10px;
 
 }
-.empty{
-    height:600px;
-}
 .titlefirst{
    margin:0px 8px 0 80px;
    background-color:white;
@@ -52,14 +50,13 @@ select{
 .helper{
     padding:15px;
 }
-span{
-    padding-right:3px;
-}
+
 .pinkbtn{
     background-color: #ff1a8c;
-    min-width:35%;
-    overflow: hidden;
+    text-align: center;
     color:white;
+    width: auto;
+
 }
 .icon{
     color:grey;
@@ -87,5 +84,7 @@ body{
     bottom: 4px;
     left: 0px;
     right: 0px;
-    margin-bottom: 2px;
+    padding:0 20px 0 20px;
+    margin-left:16px;
+    margin-right:16px;
 }

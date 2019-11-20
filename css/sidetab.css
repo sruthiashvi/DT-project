@@ -47,7 +47,7 @@
 
   }
   .headingwithicon{
-        display: flex;
+        display: inline-block;
   }
 
   .tabicon{
