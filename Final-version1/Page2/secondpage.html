@@ -1,0 +1,869 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/sidetab.css">
+<link rel="stylesheet" type="text/css" href="css/header.css">
+<link rel="stylesheet" type="text/css" href="css/card.css">
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"rel = "stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+$( ".fa-calendar" ).click(function(){
+$(".date").datepicker();
+});
+
+$(".highlight").mouseenter(function(){
+$(this).css("border","1px solid #ff1a8c")
+});
+
+$(".highlight").mouseleave(function(){
+$(this).css("border","")
+});
+
+$("#toggle").on('click', function(){
+var hidetxtvisible = $(".hidetxt").toggle().is(":visible");
+if(hidetxtvisible){
+$("#toggleicon").css("float","right")        
+}
+if(!hidetxtvisible){
+$("#toggleicon").css("float","") 
+}
+});
+$("#bar1").click(function(){
+$("#bar").css("color","#ff1a8c");
+$("#slider").css("color","");
+$("#box").css("color","");
+});
+$("#openfirst").click(function(){
+$("#slider1").css("color","#ff1a8c");
+$("#bar1").css("color","");
+$("#box1").css("color","");
+var visible = $("#first").toggle().is(":visible");
+if(visible && ($('.hidetxt').is(":hidden")))
+{
+$("#toggleicon").css("float","")
+}
+if(!visible)
+{
+$("#slider1").css("color","");
+if($('.hidetxt').is(":visible")){
+$("#toggleicon").css("float","right")
+} 
+}
+$("#second").hide();
+});
+$("#opensecond").click(function(){
+$("#box1").css("color","#ff1a8c");
+$("#slider1").css("color","");
+var visible = $("#second").toggle().is(":visible");
+if(visible && ($('.hidetxt').is(":hidden")))
+{
+$("#toggleicon").css("float","")
+}
+if(!visible)
+{
+$("#box1").css("color","");
+if($('.hidetxt').is(":visible")){
+$("#toggleicon").css("float","right")
+} 
+}
+$("#first").hide();
+});
+$(".mob").click(function(){
+$("#hidemob").css("display","block")
+
+});
+$(".data").click(function(){
+$("#hidedata").css("display","block")
+
+});
+$("#showmobilna").click(function(){
+$(".openmobilna").toggle()
+
+});
+$("#showtarifne").click(function(){
+$(".opentarifne").toggle()
+
+});
+$(".card").focus(function(){
+$(this).css("border","1px solid #ff1a8c")
+
+});
+$(".card").blur(function(){
+$(this).css("border","")
+});   
+});
+</script>
+<style>
+#first,#second{
+display:none;
+}
+.hidetxt{
+display:none;
+margin-right:60px;
+padding-left:12px;
+}
+.ui-widget-header {
+background:none;
+color:black;
+}
+
+.ui-widget-content .ui-state-default:hover{
+border-radius: 2px;
+}
+</style>
+</head>
+<body> 
+<div class="tab">
+<a href="javascript:;"  id="toggle"><i class="fa fa-bars" id="toggleicon" aria-hidden="true" style="font-size: 25px;"></i></a>
+<a href="javascript:;" id="openfirst" class="tablinks"><i class="fa fa-sliders" id="slider1" aria-hidden="true"  style="font-size: 25px;"></i><span class="hidetxt">Interakcija</span></a>
+<a href="javascript:;" id="opensecond" class="tablinks" id="box1"><i class="fa fa-window-maximize" id="box1" aria-hidden="true"  style="font-size: 25px;"></i><span class="hidetxt">Kategorija</span></a>
+<a href="javascript:;" id="hidemob"><i class="fa fa-mobile" aria-hidden="true"  style="font-size: 38px;"></i><span class="hidetxt">Mobilna Tarifa</span></a>
+<a href="javascript:;" id="hidedata"><i class="fa fa-dropbox" aria-hidden="true"  style="font-size: 25px;"></i><span class="hidetxt">Tarifne grupe</span></a>
+</div>
+<div>
+<div class="row content">
+<div class="col-md-6 col-xl-2">
+<div class="header">Tip documenta</div>
+<select class="form-control highlight">
+<option>Zahtjev</option>
+<option>Informativna ponuda</option>
+<option>Obzezujuca ponuda</option>
+<option>Save desk Zahtjev</option>
+</select>                       
+</div>
+<div class="col-md-6 col-xl-2">
+<span class="header">Zeljeni datum realizacije</span>                               
+<input type="text" style="position:relative;" class="form-control date highlight" >
+<span style="position: absolute; right:18px;top:30px;" class="fa fa-calendar "></span>
+                    
+</div>
+<div class="col-md-6 col-xl-2">
+<div class="header">Datum prodaje</div>
+<input type="text" style="position:relative;" class="form-control date highlight" >
+<span style="position:absolute; right:18px;top:30px;" class="fa fa-calendar "></span>
+
+</div>
+<div class="col-md-6 col-xl-2">
+<div class="header">Prodao</div>                               
+<input type="text" class="form-control highlight"></input>
+
+</div>
+<div class="col-md-6 col-xl-2">
+<div class="header">Rola</div>                  
+<select class="form-control highlight">
+<option>OM_Interno</option>
+<option></option>
+<option></option>
+<option></option>
+</select>
+</div>
+<div class="col-md-6 col-xl-2">
+<div class="header">Rola</div>
+<select class="form-control highlight">
+<option>Direktno</option>
+<option></option>
+<option></option>
+<option></option>
+</select>
+</div>
+</div>
+<div class="row content">
+<div class="col-xl-2 col-md-2">
+<div class="header">Tip documenta</div>
+<div class="headertext">Zahtjev</div>
+</div>                         
+<div class="col-xl-10 col-md-10">
+<span class="header">Odabrane kategorije</span>
+<div class="row">
+<div class="col-xl-4 col-lg-6 col-md-6"  style="padding-left:0px;"><div class="headertext ">Govorne usluge-Mobilne usluge-Mobilne tarife <i class="fa fa-times" aria-hidden="true" style="color:#ff1a8c;font-size:12px;"></i></div></div>
+<div class="headertext col-xl-4 col-lg-6 col-md-6"  style="padding-left:0px;">Internet/Data-Mobilne usluge-Tarife na pretplatu <i class="fa fa-times" aria-hidden="true" style="color:#ff1a8c;font-size:12px;"></i></div>
+<div class="headertext col-xl-4 col-lg-6 col-md-6"  style="padding-left:0px;">Internet/Data-Mobilne usluge-Tarife na bonove <i class="fa fa-times" aria-hidden="true" style="color:#ff1a8c;font-size:12px;"></i></div>
+</div>                                          
+</div>                   
+</div>
+<div class="bodycontent">
+<div class="row content">
+<span class="iconspan"><i class="fa fa-mobile mobileicon" aria-hidden="true" style="font-size: 38px;"></i></span>
+<span class="iconspantxt">Mobilna tarifa</span>
+<span><i class="fa fa-angle-down dropdownicon" id="showmobilna" aria-hidden="true" style="font-size:20px;"></i></span>
+</div>
+<div class="openmobilna">
+<div class="row greybg">
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12" style="padding:0 5px 0 0">
+<div class="card">
+        <div class="row2"><span class="span-block">Najbolja Executive +</span>
+
+        </div>
+        <div class="row2">
+            <div class="vlightgray-background">
+                <span class="span-block text-black">Osnovna cijena</span>
+            </div>
+            <div class="pink-background">
+                <span class="span-block">239,20 kn</span>
+            </div>
+            </div>
+            <div class="row2">
+            <div class="inner-row">
+                <span class="content2">Pozvi SMS prema HT:</span><br>
+                <span class="content1">10000 minuta/sms poruka</span>
+            </div>
+            </div>
+            <div class="row2">
+                <div class="inner-row">
+                    <span class="content2">Pozivi SMS prema ostalima:</span><br>
+                    <span class="content1">Neograniceno</span>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="inner-row">
+                    <span class="content2">Naknada za uspostavu poziva:</span><br>
+                    <span class="elipsis content1">Unutar 9000 jedinica ukljucenihu tarifu,nakon..</span>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="inner-row">
+                    <span class="content2">Podatkavni promet:</span><br>
+                    <span class="content1">100 GB</span>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="inner-row">
+                    <span class="content2">Po brzini do:</span><br>
+                    <span class="content1">262,5 Mbit/s</span>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="inner-row">
+                    <span class="content2">Opis:</span><br>
+                    <span class="content1">0,29 kn</span>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12" style="padding:0 5px 0 0">
+        <div class="card">
+                <div class="row2"><span class="span-block">Najbolja Executive +</span>
+        
+                </div>
+                <div class="row2">
+                    <div class="vlightgray-background">
+                        <span class="span-block text-black">Osnovna cijena</span>
+                    </div>
+                    <div class="pink-background">
+                        <span class="span-block">239,20 kn</span>
+                    </div>
+                    </div>
+                    <div class="row2">
+                    <div class="inner-row">
+                        <span class="content2">Pozvi SMS prema HT:</span><br>
+                        <span class="content1">10000 minuta/sms poruka</span>
+                    </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Pozivi SMS prema ostalima:</span><br>
+                            <span class="content1">Neograniceno</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Naknada za uspostavu poziva:</span><br>
+                            <span class="elipsis content1">Unutar 9000 jedinica ukljucenihu tarifu,nakon..</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Podatkavni promet:</span><br>
+                            <span class="content1">100 GB</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Po brzini do:</span><br>
+                            <span class="content1">262,5 Mbit/s</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Opis:</span><br>
+                            <span class="content1">0,29 kn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12" style="padding:0 5px 0 0">
+        <div class="card">
+                <div class="row2"><span class="span-block">Najbolja Executive +</span>
+        
+                </div>
+                <div class="row2">
+                    <div class="vlightgray-background">
+                        <span class="span-block text-black">Osnovna cijena</span>
+                    </div>
+                    <div class="pink-background">
+                        <span class="span-block">239,20 kn</span>
+                    </div>
+                    </div>
+                    <div class="row2">
+                    <div class="inner-row">
+                        <span class="content2">Pozvi SMS prema HT:</span><br>
+                        <span class="content1">10000 minuta/sms poruka</span>
+                    </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Pozivi SMS prema ostalima:</span><br>
+                            <span class="content1">Neograniceno</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Naknada za uspostavu poziva:</span><br>
+                            <span class="elipsis content1">Unutar 9000 jedinica ukljucenihu tarifu,nakon..</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Podatkavni promet:</span><br>
+                            <span class="content1">100 GB</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Po brzini do:</span><br>
+                            <span class="content1">262,5 Mbit/s</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Opis:</span><br>
+                            <span class="content1">0,29 kn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12" style="padding:0 5px 0 0">
+            <div class="card">
+                    <div class="row2"><span class="span-block">Najbolja Executive +</span>
+            
+                    </div>
+                    <div class="row2">
+                        <div class="vlightgray-background">
+                            <span class="span-block text-black">Osnovna cijena</span>
+                        </div>
+                        <div class="pink-background">
+                            <span class="span-block">239,20 kn</span>
+                        </div>
+                        </div>
+                        <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Pozvi SMS prema HT:</span><br>
+                            <span class="content1">10000 minuta/sms poruka</span>
+                        </div>
+                        </div>
+                        <div class="row2">
+                            <div class="inner-row">
+                                <span class="content2">Pozivi SMS prema ostalima:</span><br>
+                                <span class="content1">Neograniceno</span>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <div class="inner-row">
+                                <span class="content2">Naknada za uspostavu poziva:</span><br>
+                                <span class="elipsis content1">Unutar 9000 jedinica ukljucenihu tarifu,nakon..</span>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <div class="inner-row">
+                                <span class="content2">Podatkavni promet:</span><br>
+                                <span class="content1">100 GB</span>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <div class="inner-row">
+                                <span class="content2">Po brzini do:</span><br>
+                                <span class="content1">262,5 Mbit/s</span>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <div class="inner-row">
+                                <span class="content2">Opis:</span><br>
+                                <span class="content1">0,29 kn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>
+</div>
+        <div class="openmobilna">
+                <div class="row greybg">
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12" style="padding:0 5px 0 0">
+        <div class="card">
+                <div class="row2"><span class="span-block">Najbolja Executive +</span>
+        
+                </div>
+                <div class="row2">
+                    <div class="vlightgray-background">
+                        <span class="span-block text-black">Osnovna cijena</span>
+                    </div>
+                    <div class="pink-background">
+                        <span class="span-block">239,20 kn</span>
+                    </div>
+                    </div>
+                    <div class="row2">
+                    <div class="inner-row">
+                        <span class="content2">Pozvi SMS prema HT:</span><br>
+                        <span class="content1">10000 minuta/sms poruka</span>
+                    </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Pozivi SMS prema ostalima:</span><br>
+                            <span class="content1">Neograniceno</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Naknada za uspostavu poziva:</span><br>
+                            <span class="elipsis content1">Unutar 9000 jedinica ukljucenihu tarifu,nakon..</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Podatkavni promet:</span><br>
+                            <span class="content1">100 GB</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Po brzini do:</span><br>
+                            <span class="content1">262,5 Mbit/s</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Opis:</span><br>
+                            <span class="content1">0,29 kn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12" style="padding:0 5px 0 0">
+                    <div class="card">
+                            <div class="row2"><span class="span-block">Najbolja Executive +</span>
+                    
+                            </div>
+                            <div class="row2">
+                                <div class="vlightgray-background">
+                                    <span class="span-block text-black">Osnovna cijena</span>
+                                </div>
+                                <div class="pink-background">
+                                    <span class="span-block">239,20 kn</span>
+                                </div>
+                                </div>
+                                <div class="row2">
+                                <div class="inner-row">
+                                    <span class="content2">Pozvi SMS prema HT:</span><br>
+                                    <span class="content1">10000 minuta/sms poruka</span>
+                                </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Pozivi SMS prema ostalima:</span><br>
+                                        <span class="content1">Neograniceno</span>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Naknada za uspostavu poziva:</span><br>
+                                        <span class="elipsis content1">Unutar 9000 jedinica ukljucenihu tarifu,nakon..</span>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Podatkavni promet:</span><br>
+                                        <span class="content1">100 GB</span>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Po brzini do:</span><br>
+                                        <span class="content1">262,5 Mbit/s</span>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Opis:</span><br>
+                                        <span class="content1">0,29 kn</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                              
+            </div>                                                                                    
+                </div>
+<div class="row content">
+        <span class="iconspan"><i class="fa fa-dropbox dropboxicon" aria-hidden="true" style="font-size: 22px;"></i></span>
+        <span class="iconspantxt">Tarifne grupe</span>
+        <span><i class="fa fa-angle-down dropdownicon" id="showtarifne" aria-hidden="true" style="font-size:20px;"></i></span>
+    </div>
+    <div class="opentarifne">
+            <div class="row greybg">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12" style="padding:0 5px 0 0">
+                <div class="card">
+                        <div class="row2"><span class="span-block">Najbolja Executive +</span>
+                
+                        </div>
+                        <div class="row2">
+                            <div class="vlightgray-background">
+                                <span class="span-block text-black">Osnovna cijena</span>
+                            </div>
+                            <div class="pink-background">
+                                <span class="span-block">239,20 kn</span>
+                            </div>
+                            </div>
+                            <div class="row2">
+                            <div class="inner-row">
+                                <span class="content2">Pozvi SMS prema HT:</span><br>
+                                <span class="content1">10000 minuta/sms poruka</span>
+                            </div>
+                            </div>
+                            <div class="row2">
+                                <div class="inner-row">
+                                    <span class="content2">Pozivi SMS prema ostalima:</span><br>
+                                    <span class="content1">Neograniceno</span>
+                                </div>
+                            </div>
+                            <div class="row2">
+                                <div class="inner-row">
+                                    <span class="content2">Naknada za uspostavu poziva:</span><br>
+                                    <span class="elipsis content1">Unutar 9000 jedinica ukljucenihu tarifu,nakon..</span>
+                                </div>
+                            </div>
+                            <div class="row2">
+                                <div class="inner-row">
+                                    <span class="content2">Podatkavni promet:</span><br>
+                                    <span class="content1">100 GB</span>
+                                </div>
+                            </div>
+                            <div class="row2">
+                                <div class="inner-row">
+                                    <span class="content2">Po brzini do:</span><br>
+                                    <span class="content1">262,5 Mbit/s</span>
+                                </div>
+                            </div>
+                            <div class="row2">
+                                <div class="inner-row">
+                                    <span class="content2">Opis:</span><br>
+                                    <span class="content1">0,29 kn</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12" style="padding:0 5px 0 0">
+        <div class="card">
+                <div class="row2"><span class="span-block">Najbolja Executive +</span>
+        
+                </div>
+                <div class="row2">
+                    <div class="vlightgray-background">
+                        <span class="span-block text-black">Osnovna cijena</span>
+                    </div>
+                    <div class="pink-background">
+                        <span class="span-block">239,20 kn</span>
+                    </div>
+                    </div>
+                    <div class="row2">
+                    <div class="inner-row">
+                        <span class="content2">Pozvi SMS prema HT:</span><br>
+                        <span class="content1">10000 minuta/sms poruka</span>
+                    </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Pozivi SMS prema ostalima:</span><br>
+                            <span class="content1">Neograniceno</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Naknada za uspostavu poziva:</span><br>
+                            <span class="elipsis content1">Unutar 9000 jedinica ukljucenihu tarifu,nakon..</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Podatkavni promet:</span><br>
+                            <span class="content1">100 GB</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Po brzini do:</span><br>
+                            <span class="content1">262,5 Mbit/s</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Opis:</span><br>
+                            <span class="content1">0,29 kn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12" style="padding:0 5px 0 0">
+        <div class="card">
+                <div class="row2"><span class="span-block">Najbolja Executive +</span>
+        
+                </div>
+                <div class="row2">
+                    <div class="vlightgray-background">
+                        <span class="span-block text-black">Osnovna cijena</span>
+                    </div>
+                    <div class="pink-background">
+                        <span class="span-block">239,20 kn</span>
+                    </div>
+                    </div>
+                    <div class="row2">
+                    <div class="inner-row">
+                        <span class="content2">Pozvi SMS prema HT:</span><br>
+                        <span class="content1">10000 minuta/sms poruka</span>
+                    </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Pozivi SMS prema ostalima:</span><br>
+                            <span class="content1">Neograniceno</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Naknada za uspostavu poziva:</span><br>
+                            <span class="elipsis content1">Unutar 9000 jedinica ukljucenihu tarifu,nakon..</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Podatkavni promet:</span><br>
+                            <span class="content1">100 GB</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Po brzini do:</span><br>
+                            <span class="content1">262,5 Mbit/s</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Opis:</span><br>
+                            <span class="content1">0,29 kn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12" style="padding:0 5px 0 0">
+                    <div class="card">
+                            <div class="row2"><span class="span-block">Najbolja Executive +</span>
+                    
+                            </div>
+                            <div class="row2">
+                                <div class="vlightgray-background">
+                                    <span class="span-block text-black">Osnovna cijena</span>
+                                </div>
+                                <div class="pink-background">
+                                    <span class="span-block">239,20 kn</span>
+                                </div>
+                                </div>
+                                <div class="row2">
+                                <div class="inner-row">
+                                    <span class="content2">Pozvi SMS prema HT:</span><br>
+                                    <span class="content1">10000 minuta/sms poruka</span>
+                                </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Pozivi SMS prema ostalima:</span><br>
+                                        <span class="content1">Neograniceno</span>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Naknada za uspostavu poziva:</span><br>
+                                        <span class="elipsis content1">Unutar 9000 jedinica ukljucenihu tarifu,nakon..</span>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Podatkavni promet:</span><br>
+                                        <span class="content1">100 GB</span>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Po brzini do:</span><br>
+                                        <span class="content1">262,5 Mbit/s</span>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Opis:</span><br>
+                                        <span class="content1">0,29 kn</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                            </div>
+ <div class="opentarifne">
+<div class="row greybg">
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12" style="padding:0 5px 0 0">
+        <div class="card">
+                <div class="row2"><span class="span-block">Najbolja Executive +</span>
+        
+                </div>
+                <div class="row2">
+                    <div class="vlightgray-background">
+                        <span class="span-block text-black">Osnovna cijena</span>
+                    </div>
+                    <div class="pink-background">
+                        <span class="span-block">239,20 kn</span>
+                    </div>
+                    </div>
+                    <div class="row2">
+                    <div class="inner-row">
+                        <span class="content2">Pozvi SMS prema HT:</span><br>
+                        <span class="content1">10000 minuta/sms poruka</span>
+                    </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Pozivi SMS prema ostalima:</span><br>
+                            <span class="content1">Neograniceno</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Naknada za uspostavu poziva:</span><br>
+                            <span class="elipsis content1">Unutar 9000 jedinica ukljucenihu tarifu,nakon..</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Podatkavni promet:</span><br>
+                            <span class="content1">100 GB</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Po brzini do:</span><br>
+                            <span class="content1">262,5 Mbit/s</span>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="inner-row">
+                            <span class="content2">Opis:</span><br>
+                            <span class="content1">0,29 kn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12" style="padding:0 5px 0 0">
+                    <div class="card">
+                            <div class="row2"><span class="span-block">Najbolja Executive +</span>
+                    
+                            </div>
+                            <div class="row2">
+                                <div class="vlightgray-background">
+                                    <span class="span-block text-black">Osnovna cijena</span>
+                                </div>
+                                <div class="pink-background">
+                                    <span class="span-block">239,20 kn</span>
+                                </div>
+                                </div>
+                                <div class="row2">
+                                <div class="inner-row">
+                                    <span class="content2">Pozvi SMS prema HT:</span><br>
+                                    <span class="content1">10000 minuta/sms poruka</span>
+                                </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Pozivi SMS prema ostalima:</span><br>
+                                        <span class="content1">Neograniceno</span>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Naknada za uspostavu poziva:</span><br>
+                                        <span class="elipsis content1">Unutar 9000 jedinica ukljucenihu tarifu,nakon..</span>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Podatkavni promet:</span><br>
+                                        <span class="content1">100 GB</span>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Po brzini do:</span><br>
+                                        <span class="content1">262,5 Mbit/s</span>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="inner-row">
+                                        <span class="content2">Opis:</span><br>
+                                        <span class="content1">0,29 kn</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                               
+        </div>                                                                                    
+ </div>
+</div>  
+</div>
+<div id="first" class="tabcontent">
+<div class="sidenav secondtab">
+    <h2 style="color:#ff1a8c;">Interakcije</h2>
+    <a href="#" class="change">Aktivacija</a>
+    <a href="#" class="change">MNP portin</a>
+    <a href="#" class="change">Simpa prijelaz</a>
+    <a href="#" class="change">Promjena vlasnika</a>
+    <a href="#" class="change">Transfer prikjucka</a>
+    </div>
+</div>  
+<div id="second" class="tabcontent">
+<div class="sidenav">                 
+<div><h3 class="headingwithicon" style="color:#ff1a8c;">Kategorije</h3><i class="fa fa-trash-o" aria-hidden="true" style="font-size: 30px;color:#b3b3b3;padding-right:8px;padding-top:1px;float: right;"></i></div>
+<h3 class="elipsis">Govorne usluge</h3>
+<a href="#" class="normal">Mobile usluge</a>
+<a href="#" class="change mob">Mobile tarife</a>
+<a href="#" class="change mob">Iskon tarife</a>
+<a href="#" class="normal">Fiksne usluge</a>
+<a href="#" class="change mob">Fiksni prikljucak</a>
+<h3 class="elipsis">Internet/Data</h3>
+<a href="#" class="normal">Mobile usluge</a>
+<a href="#" class="change data">Tarife na pretplatu</a>
+<a href="#" class="change data">Tarife na bonove</a>
+<a href="#" class="normal">Fiksne usluge</a>
+<a href="#" class="change data">Kucni Internet</a>
+<a href="#" class="change data">Sirokopojasni Internet</a>
+<h3 class="elipsis">TV-Multimedija</h3>
+<a href="#" class="normal">TV</a>
+<a href="#" class="change">Televizija</a>
+<a href="#" class="change">DTH pay TV</a>
+<a href="#" class="change">IPTV Headend usluga</a>
+<a href="#" class="normal">Multimedija</a>
+<a href="#" class="change">TV ToGo</a>
+<a href="#" class="change">Deezer</a>
+</div>  
+</div>     
+</body>

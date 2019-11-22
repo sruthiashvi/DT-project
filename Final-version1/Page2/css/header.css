@@ -1,0 +1,93 @@
+.header{
+    color:#ff1a8c;
+    font-size:14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+span{
+    margin-right: 10px;
+}
+.elipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+body{
+    background-color: #efefef;
+
+}
+.title{
+    margin:6px 2px 4px 6px;
+}
+
+.titlesecond{
+ margin:0px 8px 0px 310px;
+background-color:white;
+margin-top:10px;
+min-height:80px;
+
+}
+input{
+margin-bottom: 10px;
+}
+select{
+    margin-bottom: 10px;
+
+}
+.titlefirst{
+   margin:0px 8px 0 80px;
+   background-color:white;
+   margin-top:10px;
+   min-height:75px;
+   overflow: hidden;
+   }
+.headertext{
+    color:gray;
+}
+ #list li{
+    display: inline;
+    padding-right:5px;
+}
+.helper{
+    padding:15px;
+}
+
+.pinkbtn{
+    background-color: #ff1a8c;
+    text-align: center;
+    color:white;
+    width: auto;
+
+}
+.icon{
+    color:grey;
+    padding:4px 0 4px 0;
+}
+.kn{
+    color:#ff1a8c;
+    font-size:20px;
+    font-weight: 600;
+}
+body{
+    color:grey;
+}
+#wrapper{
+    display: flex;
+    align-items: center;
+}
+.form-group{
+    width:100%;
+}
+.footer {
+    position:fixed;
+    min-height: 50px;
+    overflow: hidden;
+    bottom: 4px;
+    left: 0px;
+    right: 0px;
+    padding:0 20px 0 20px;
+    margin-left:20px;
+    margin-right:12px;
+}

@@ -1,0 +1,1040 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css\header.css">
+<link rel="stylesheet" type="text/css" href="css\breadcrumb.css">
+<link rel="stylesheet" type="text/css" href="css\content.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+}
+.checkbox label::before{
+    content: "";
+    display: inline-block;
+    
+    height: 20px;
+    width: 20px;
+    
+    border: 2px solid;
+    border-radius: 2px;
+}
+.checkbox label::after {
+    content: "";
+    display: inline-block;
+    height: 7px;
+    width: 12px;
+    border-left: 3px solid;
+    border-bottom: 3px solid;
+    
+    transform: rotate(-45deg);
+}
+.checkbox label {
+    position: relative;
+}
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+}
+/*Outer-box*/
+.checkbox label::before {
+    top: 5px;
+}
+.centre-checkbox label::before {
+    top: 1px;
+}
+
+/*Checkmark*/
+.checkbox label::after {
+    left: 24px;
+    top: 10px;
+}
+
+.centre-checkbox label::after{
+    left: 5px;
+    top: 7px;
+}
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+/*Unhide the checkmark on the checked state*/
+.checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+/*white background to checkbox*/
+.whitebox input[type="checkbox"]:checked+ label::before{
+    background-color: white;
+}
+.whitebox input[type="checkbox"]:checked + label::after{
+    border-left: 3px solid #0388e6;
+    border-bottom: 3px solid #0388e6;
+}
+.lbluebox input[type="checkbox"]:checked + label::after{
+  border-left: 3px solid #92d2ff;
+  border-bottom: 3px solid #92d2ff;
+}
+.centre-checkbox input[type="checkbox"]:checked + label::after{
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+}
+.graybox label::before{
+    border: 2px solid #d9d9d9;
+}
+.graybox input[type="checkbox"]:checked + label::before{
+  border: 2px solid #ff008d;
+  background-color: #ff008d;
+}
+.flexrow {
+    padding:0px;    
+}
+.checkbox{
+    margin-bottom:0px;
+    margin-top: 0px;
+}
+.font24{
+  font-size: 20px;
+}
+.userIcon{
+    padding: 0px;
+    padding-left: 24px;
+    padding-top: 5px;
+    font-size: 19px;
+}
+.data-container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.centreLabel{
+  padding-left: 25px;
+    font-size: 15px;
+    /* line-height: 15px; */
+    color: #9c9898;
+}
+.warning-icon{
+  padding: 0px;
+  color: #ffb300;
+}
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row title"  style="background-color: white;">
+            <div class="col-xs-2">
+                <div class="header">Tip documenta</div>
+                <div class="headertext">Zahtjev</div>
+            </div>
+            <div class="col-xs-2">
+                <div class="header">Zeljeni datum realizacije</div>
+                <div class="headertext">02.10.2019</div>
+            </div>
+            <div class="col-xs-2">
+                <div class="header">Datum prodaje</div>
+                <div class="headertext">02.10.2019</div>
+            </div>
+            <div class="col-xs-2">
+                <div class="header">Prodao</div>
+                <div class="headertext">Luka Kristof</div>
+            </div>
+            <div class="col-xs-2">
+                <div class="header">Rola</div>
+                <div class="headertext">OM_Interno</div>
+            </div>
+            <div class="col-xs-2">
+                <div class="header">Nacin sporuke</div>
+                <div class="headertext">Direktno</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row flat">
+                    <a href="#" class="first active">OSNOVNA KONFIGURACIJA</a>
+                    <a href="#" class="middle">OPCIJE</a>
+                    <a href="#" class="first">DODATNE USLUGE</a>
+                    <a href="#" class="first">SAZETAK</a>
+                    <a href="#" class="last">BA VALIDACIJAK</a>
+                    <a href="#" class="last">CREDIT SCORING</a>
+                    <a href="#" class="last">SAP/TRGO DOSTAVNICA</a>
+                    <a href="#" class="last">ISPIS / POTPIS</a>
+    </div>    
+
+    <div class="container-fluid" style="margin-left:14px;margin-right:20px">
+
+    <div class="row centercontent">
+            <div class="col-xs-3">
+                    <div class="sidebox">
+                            <div class="dataHead-container">
+                            <div class="table1-row padding5">
+                            <span class="glyphicon glyphicon-menu-left" style="font-size:20px;"></span>
+                            <span class="fas fa-angle-double-up align-right" style="font-size:20px;"></span>
+                            <span class="fab fa-sistrix align-right" style="font-size:20px;"></span>
+                            </div>
+                            </div>
+                            
+                            <div class="container1">
+                            <div class="data-container darkblue-background">
+                                <div style="display:flex;">  
+                                <div class="checkbox whitebox flexgrow">
+                                    <input id="a" type="checkbox">
+                                    <label for="a" class="font24" style="width: 100%;">
+                                <div class="flexrow">
+                                    <div><span class="glyphicon glyphicon-user userIcon"></span></div>
+                                    <div class="flexgrow">Single precculici</div>
+                                    <div><span class="fas fa-circle icon-red" style="padding:0px;padding-top:5px;"></span></div>
+                                   
+                                </div>
+                                  </label> 
+                                
+                            </div>
+                            <div>
+                                    <span id="chevron1" class="fa fa-angle-down" style="padding:0px;padding-top:5px;" onclick="hideORshow(this.id,'expand1')"></span>
+                                    <span id="expand1" class="fa fa-angle-up" style="padding:0px;padding-top:5px;" onclick="hideORshow(this.id,'chevron1')"></span>
+                            </div>
+                        </div>
+                            </div>
+                            
+                            <div class="data-container lightblue-background">
+                                <div style="display:flex;">  
+                                        <div class="checkbox whitebox lbluebox flexgrow"  onclick="checksubfields('b',3)">
+                                    <input id="b" type="checkbox">
+                                    <label for="b" class="font24" style="width: 100%;">
+                                            <div class="flexrow">
+                                                <div><span class="glyphicon glyphicon-euro userIcon"></span></div>
+                                                <div class="flexgrow">63001700877</div>
+                                               
+                                            </div>
+                                              </label> 
+                                    </div>
+                                  <div>
+                                  <span id="chevron2" class="fa fa-angle-down" onclick="expand2(this.id,'expand2')"></span>
+                                  <span id="expand2" class="fa fa-angle-up" onclick="chevron2(this.id,'chevron2')"></span>
+                                  </div>
+                                </div>
+                            </div>
+                            
+                            <div id="expand2-option1" class="data-container white-background" style="border-bottom: solid 1px #d9d9d9;">
+                                            <div class="checkbox graybox flexgrow">
+                                        <input id="b1" type="checkbox">
+                                        <label for="b1" class="font24" style="width: 100%;">
+                                                <div class="flexrow">
+                                                    <div><span class="glyphicon glyphicon-phone icon-gray userIcon" style="position: static;"></span></div>
+                                                    <div class="flexgrow" style="line-height: 17px;">
+                                                            <div class="text-reduce" style="font-size: 15px;">Najmola M sa sadeeaef</div>
+                                                            <div style="color:#989696;font-size: 19px;">3900200180</div>
+                                                    </div>
+                                                    <div><span class="fas fa-circle icon-green" style="padding:0px;padding-top:5px;"></span></div>
+                                                </div>
+                                                  </label> 
+                                        </div>
+                            </div>
+                            <div id="expand2-option2" class="data-container white-background" style="border-bottom: solid 1px #d9d9d9;">
+                                <div class="checkbox graybox flexgrow">
+                                    <input id="b2" type="checkbox">
+                                    <label for="b2" class="font24" style="width: 100%;">
+                                            <div class="flexrow">
+                                                <div><span class="glyphicon glyphicon-phone icon-gray userIcon" style="position: static;"></span></div>
+                                                <div class="flexgrow" style="line-height: 17px;">
+                                                        <div class="text-reduce" style="font-size: 15px;">Najmola M sa sadeeaef</div>
+                                                        <div style="color:#989696;font-size: 19px;">3900200180</div>
+                                                </div>
+                                                <div><span class="fas fa-circle icon-green" style="padding:0px;padding-top:5px;"></span></div>
+                                            </div>
+                                              </label> 
+                                    </div>  
+                                </div>
+                            
+                            <div id="expand2-option3" class="data-container white-background">
+                                <div class="checkbox graybox flexgrow">
+                                    <input id="b3" type="checkbox">
+                                    <label for="b3" class="font24" style="width: 100%;">
+                                            <div class="flexrow">
+                                                <div><span class="glyphicon glyphicon-phone icon-gray userIcon" style="position: static;"></span></div>
+                                                <div class="flexgrow" style="line-height: 17px;">
+                                                        <div class="text-reduce" style="font-size: 15px;">Najmola M sa sadeeaef</div>
+                                                        <div style="color:#989696;font-size: 19px;">3900200180</div>
+                                                </div>
+                                                <div><span class="fas fa-circle icon-green" style="padding:0px;padding-top:5px;"></span></div>
+                                            </div>
+                                              </label> 
+                                    </div>
+                            </div>
+                            
+                            <div class="data-container lightblue-background">
+                                <div style="display:flex;">  
+                                    <div class="checkbox whitebox lbluebox flexgrow"  onclick="checksubfields('c',6)">
+                                <input id="c" type="checkbox">
+                                <label for="c" class="font24" style="width: 100%;">
+                                        <div class="flexrow">
+                                            <div><span class="glyphicon glyphicon-euro userIcon"></span></div>
+                                            <div class="flexgrow">63001700877</div>
+                                           
+                                        </div>
+                                          </label> 
+                                </div>
+                              <div>
+                              <span id="chevron3" class="fa fa-angle-down" onclick="expand3(this.id,'expand3')"></span>
+                              <span id="expand3" class="fa fa-angle-up" onclick="chevron3(this.id,'chevron3')"></span>
+                              </div>
+                            </div>  
+                            </div>
+                            
+                            <div id="expand3-option1" class="data-container white-background" style="border-bottom: solid 1px #d9d9d9;">
+                                <div class="checkbox graybox flexgrow">
+                                    <input id="c1" type="checkbox">
+                                    <label for="c1" class="font24" style="width: 100%;">
+                                            <div class="flexrow">
+                                                <div><span class="glyphicon glyphicon-phone icon-gray userIcon" style="position: static;"></span></div>
+                                                <div class="flexgrow" style="line-height: 17px;">
+                                                        <div class="text-reduce" style="font-size: 15px;">Najmola M sa sadeeaef</div>
+                                                        <div style="color:#989696;font-size: 19px;">3900200180</div>
+                                                </div>
+                                                <div><span class="fas fa-circle icon-green" style="padding:0px;padding-top:5px;"></span></div>
+                                            </div>
+                                              </label> 
+                                    </div> 
+                            </div>
+                            
+                            <div id="expand3-option2" class="data-container white-background" style="border-bottom: solid 1px #d9d9d9;">
+                                <div class="checkbox graybox flexgrow">
+                                    <input id="c2" type="checkbox">
+                                    <label for="c2" class="font24" style="width: 100%;">
+                                            <div class="flexrow">
+                                                <div><span class="glyphicon glyphicon-phone icon-gray userIcon" style="position: static;"></span></div>
+                                                <div class="flexgrow" style="line-height: 17px;">
+                                                        <div class="text-reduce" style="font-size: 15px;">Najmola M sa sadeeaef</div>
+                                                        <div style="color:#989696;font-size: 19px;">3900200180</div>
+                                                </div>
+                                                <div><span class="fas fa-circle icon-green" style="padding:0px;padding-top:5px;"></span></div>
+                                            </div>
+                                              </label> 
+                                    </div> 
+                            </div>
+                            
+                            <div id="expand3-option3" class="data-container white-background" style="border-bottom: solid 1px #d9d9d9;">
+                                <div class="checkbox graybox flexgrow">
+                                    <input id="c3" type="checkbox">
+                                    <label for="c3" class="font24" style="width: 100%;">
+                                            <div class="flexrow">
+                                                <div><span class="glyphicon glyphicon-phone icon-gray userIcon" style="position: static;"></span></div>
+                                                <div class="flexgrow" style="line-height: 17px;">
+                                                        <div class="text-reduce" style="font-size: 15px;">Najmola M sa sadeeaef</div>
+                                                        <div style="color:#989696;font-size: 19px;">3900200180</div>
+                                                </div>
+                                                <div><span class="fas fa-circle icon-green" style="padding:0px;padding-top:5px;"></span></div>
+                                            </div>
+                                              </label> 
+                                    </div> 
+                            </div>
+                            <div id="expand3-option4" class="data-container white-background" style="border-bottom: solid 1px #d9d9d9;">
+                                <div class="checkbox graybox flexgrow">
+                                    <input id="c4" type="checkbox">
+                                    <label for="c4" class="font24" style="width: 100%;">
+                                            <div class="flexrow">
+                                                <div><span class="glyphicon glyphicon-phone icon-gray userIcon" style="position: static;"></span></div>
+                                                <div class="flexgrow" style="line-height: 17px;">
+                                                        <div class="text-reduce" style="font-size: 15px;">Najmola M sa sadeeaef</div>
+                                                        <div style="color:#989696;font-size: 19px;">3900200180</div>
+                                                </div>
+                                                <div><span class="fas fa-circle icon-green" style="padding:0px;padding-top:5px;"></span></div>
+                                            </div>
+                                              </label> 
+                                    </div> 
+                            </div>
+                            
+                            <div id="expand3-option5" class="data-container white-background" style="border-bottom: solid 1px #d9d9d9;">
+                                <div class="checkbox graybox flexgrow">
+                                    <input id="c5" type="checkbox">
+                                    <label for="c5" class="font24" style="width: 100%;">
+                                            <div class="flexrow">
+                                                <div><span class="glyphicon glyphicon-phone icon-gray userIcon" style="position: static;"></span></div>
+                                                <div class="flexgrow" style="line-height: 17px;">
+                                                        <div class="text-reduce" style="font-size: 15px;">Najmola M sa sadeeaef</div>
+                                                        <div style="color:#989696;font-size: 19px;">3900200180</div>
+                                                </div>
+                                                <div><span class="fas fa-circle icon-green" style="padding:0px;padding-top:5px;"></span></div>
+                                            </div>
+                                              </label> 
+                                    </div> 
+                            </div>
+                            
+                            <div id="expand3-option6" class="data-container white-background" style="border-bottom: solid 1px #d9d9d9;">
+                                <div class="checkbox graybox flexgrow">
+                                    <input id="c6" type="checkbox">
+                                    <label for="c6" class="font24" style="width: 100%;">
+                                            <div class="flexrow">
+                                                <div><span class="glyphicon glyphicon-phone icon-gray userIcon" style="position: static;"></span></div>
+                                                <div class="flexgrow" style="line-height: 17px;">
+                                                        <div class="text-reduce" style="font-size: 15px;">Najmola M sa sadeeaef</div>
+                                                        <div style="color:#989696;font-size: 19px;">3900200180</div>
+                                                </div>
+                                                <div><span class="fas fa-circle icon-green" style="padding:0px;padding-top:5px;"></span></div>
+                                            </div>
+                                              </label> 
+                                    </div> 
+                            </div>
+                            
+                            </div>
+                            </div>
+            </div>
+            <div class="col-xs-9">
+                <div>
+                            <div class="col-xs-12" style="margin-left: 5px;margin-top: 7px;">
+                                <div class="newdiv">
+                                <span style="color:#ff1a8c;font-weight:bold;">3859922000581</span>
+                                <span>Najbolja M sa Magenta 1 pogodnostima</span>
+                                <span style="position:absolute;right:30px;"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                                <span style="position:absolute;right:10px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                            <!--<div class="col-xs-2 col-xs-2">
+                                <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                                <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                            </div>-->                  
+                            <div class="col-xs-9">
+                                    <div class="container-centre">
+                                      <div class="text-pink">Tarifa
+                                      <span class="fas fa-angle-double-up align-right"></span>
+                                      <span class="fas fa-columns align-right"></span>
+                                      <span class="fab fa-sistrix align-right"></span>
+                                      </div>
+                                      <div class="fadedScroller height530">
+                                      <div class="gray-background">
+                                      <div class="box-container">
+                                      <select class="selectwidth">
+                                      <option class="elipsis">Najbolja M Sa Magenta 1 pogodnostima</option>
+                                      </select>
+                                      <span class="glyphicon glyphicon-menu-down icon-select iconpos"></span>
+                                      </div>
+                                      <div class="box2">
+                                        <div class="row">
+                                      <div class="list-item col-xs-4 col-md-4 col-sm-6">
+                                          <div class="form-control">
+                                              <div class="checkbox graybox centre-checkbox flexgrow">
+                                              <input id="checkbox-11" type="checkbox">
+                                              <label for="checkbox-11" class="font24" style="width: 100%;padding: 0px;">
+                                                          <div class="centreLabel">Resursi mobilne linije</div>
+                                                      </label> 
+                                                     </div>
+                                      </div>  
+                                      </div>
+                                      <div class="list-item col-xs-4 col-md-4 col-sm-6">
+                                          <div class="form-control">
+                                              <div class="checkbox graybox centre-checkbox flexgrow">
+                                              <input id="d2" type="checkbox">
+                                              <label for="d2" class="font24" style="width: 100%;padding: 0px;">
+                                                          <div class="centreLabel">Sigurno surfanje</div>
+                                                      </label> 
+                                                     </div>
+                                      </div>  
+                                      </div>  
+                                      <div class="list-item col-xs-4 col-md-4 col-sm-6">
+                                          <div class="form-control">
+                                              <div class="checkbox graybox centre-checkbox flexgrow">
+                                              <input id="d3" type="checkbox">
+                                              <label for="d3" class="font24" style="width: 100%;padding: 0px;">
+                                                          <div class="centreLabel">Sigurno surfanje 1 GB</div>
+                                                      </label> 
+                                                     </div>
+                                      </div>
+                                      </div>                                                                     
+                                      </div>
+                                      <div class="row">
+                                          <div class="list-item col-xs-4 col-md-4 col-sm-6">
+                                            <div class="form-control">
+                                              <div style="display:flex;">  
+                                                  <div class="checkbox graybox centre-checkbox flexgrow">
+                                              <input id="d4" type="checkbox">
+                                              <label for="d4" class="font24" style="width: 100%;padding: 0px;">
+                                                          
+                                                          <div class="centreLabel">Sigurno surfanje 250 MB</div>
+                                                      
+                                                        </label> 
+                                              </div>
+                                              <div><span class="fa fa-warning warning-icon"></span></div>
+                                          </div>  
+                                          </div> 
+                                          </div> 
+                                          <div class="list-item col-xs-4 col-md-4 col-sm-6">
+                                              <div class="form-control">
+                                              <div class="checkbox graybox centre-checkbox flexgrow">
+                                              <input id="d5" type="checkbox">
+                                              <label for="d5" class="font24" style="width: 100%;padding: 0px;">
+                                                          <div class="centreLabel">Sigurno surfanje 50 MB</div>
+                                                      </label> 
+                                                     </div>
+                                      </div>
+                                      </div>  
+                                          <div class="list-item col-xs-4 col-md-4 col-sm-6">
+                                              <div class="form-control">
+                                              <div class="checkbox graybox centre-checkbox flexgrow">
+                                              <input id="d6" type="checkbox">
+                                              <label for="d6" class="font24" style="width: 100%;padding: 0px;" onclick="show('d6','division33')">
+                                                          <div class="centreLabel">SPH 1</div>
+                                                      </label> 
+                                                     </div>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="list-item col-xs-4 col-md-4 col-sm-6">
+                                              <div class="form-control">
+                                                  <div class="checkbox graybox centre-checkbox flexgrow">
+                                                  <input id="d7" type="checkbox">
+                                                  <label for="d7" class="font24" style="width: 100%;padding: 0px;">
+                                                              <div class="centreLabel">SPH 2</div>
+                                                          </label> 
+                                                         </div>
+                                          </div> 
+                                          </div> 
+                                          <div class="list-item col-xs-4 col-md-4 col-sm-6">
+                                              <div class="form-control">
+                                                  <div class="checkbox graybox centre-checkbox flexgrow">
+                                                  <input id="d8" type="checkbox">
+                                                  <label for="d8" class="font24" style="width: 100%;padding: 0px;">
+                                                              <div class="centreLabel">SPH 3</div>
+                                                          </label> 
+                                                         </div>
+                                          </div> 
+                                          </div> 
+                                          <div class="list-item col-xs-4 col-md-4 col-sm-6">
+                                              <div class="form-control">
+                                                  <div class="checkbox graybox centre-checkbox flexgrow">
+                                                  <input id="d9" type="checkbox">
+                                                  <label for="d9" class="font24" style="width: 100%;padding: 0px;">
+                                                              <div class="centreLabel">SPH 4</div>
+                                                          </label> 
+                                                         </div>
+                                          </div>
+                                          </div> 
+                                      </div>
+                                      <div class="row">
+                                          <div class="list-item col-xs-4 col-md-4 col-sm-6">
+                                              <div class="form-control">
+                                                  <div style="display:flex;">  
+                                                      <div class="checkbox centre-checkbox graybox flexgrow">
+                                                  <input id="d10" type="checkbox">
+                                                  <label for="d10" class="font24" style="width: 100%;padding: 0px;">
+                                                              
+                                                              <div class="centreLabel">SPH 400+</div>
+                                                          
+                                                            </label> 
+                                                  </div>
+                                                  <div><span class="fa fa-warning warning-icon"></span></div>
+                                              </div>  
+                                              </div>  
+                                          </div> 
+                                          <div class="list-item col-xs-4 col-md-4 col-sm-6">
+                                              <div class="form-control">
+                                                  <div class="checkbox graybox centre-checkbox flexgrow">
+                                                  <input id="d11" type="checkbox">
+                                                  <label for="d11" class="font24" style="width: 100%;padding: 0px;">
+                                                              <div class="centreLabel">Osiguranje uredaja</div>
+                                                          </label> 
+                                                         </div>
+                                          </div>  
+                                          </div> 
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <div class="text-blue">Pogodnosti
+                                      <i id="chevron21" class="fa fa-angle-down icon-gray align-right" onclick="expand(this.id,'expand21','division1','block')"></i>
+                                      <i id="expand21" class="fa fa-angle-up icon-gray align-right" onclick="expand(this.id,'chevron21','division1','none')"></i>
+                                      </div>
+                                      <div class="gray-background" id="division1">
+                                      <div class="box2">
+                                    <div class="row">
+                                      <div class="list-item col-xs-4 col-sm-6">
+                                          <div class="form-control">
+                                              <div class="checkbox graybox centre-checkbox flexgrow">
+                                              <input id="checkbox-21" type="checkbox">
+                                              <label for="checkbox-21" class="font24" style="width: 100%;padding: 0px;" onclick="show('','division36')">
+                                                          <div class="centreLabel">Najbolja obitelj</div>
+                                                      </label> 
+                                                     </div>
+                                      </div> 
+                                      </div>
+                                      <div class="list-item  col-xs-4 col-sm-6">
+                                          <div class="form-control">
+                                              <div class="checkbox graybox centre-checkbox flexgrow">
+                                              <input id="checkbox-22" type="checkbox">
+                                              <label for="checkbox-22" class="font24" style="width: 100%;padding: 0px;"">
+                                                          <div class="centreLabel">Osiguranje uredaja</div>
+                                                      </label> 
+                                                     </div>
+                                      </div> 
+                                      </div>
+                                      <div class="list-item  col-xs-4 col-sm-6">
+                                          <div class="form-control">
+                                              <div class="checkbox graybox centre-checkbox flexgrow">
+                                              <input id="checkbox-23" type="checkbox">
+                                              <label for="checkbox-23" class="font24" style="width: 100%;padding: 0px;">
+                                                          <div class="centreLabel">SIM Only pogidnost</div>
+                                                      </label> 
+                                                     </div>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="list-item  col-xs-4 col-sm-6">
+                                              <div class="form-control">
+                                                  <div class="checkbox graybox centre-checkbox flexgrow">
+                                                  <input id="checkbox-24" type="checkbox">
+                                                  <label for="checkbox-24" class="font24" style="width: 100%;padding: 0px;"">
+                                                              <div class="centreLabel">SIM Only pogodnost 1 GB</div>
+                                                          </label> 
+                                                         </div>
+                                          </div>  
+                                            
+                                          </div>
+                                          <div class="list-item  col-xs-4 col-sm-6">
+                                              <div class="form-control">
+                                                  <div style="display:flex;">  
+                                                      <div class="checkbox graybox centre-checkbox flexgrow">
+                                                  <input id="checkbox-25" type="checkbox">
+                                                  <label for="checkbox-25" class="font24" style="width: 100%;padding: 0px;">
+                                                              
+                                                              <div class="centreLabel">SIM Only pogodnost 2 GB</div>
+                                                          
+                                                            </label> 
+                                                  </div>
+                                                  <div><span class="fa fa-warning warning-icon"></span></div>
+                                              </div>  
+                                              </div>  
+                                          </div>
+                                          <div class="list-item  col-xs-4 col-sm-6">
+                                              <div class="form-control">
+                                                  <div class="checkbox graybox centre-checkbox flexgrow">
+                                                  <input id="checkbox-26" type="checkbox">
+                                                  <label for="checkbox-26" class="font24" style="width: 100%;padding: 0px;">
+                                                              <div class="centreLabel">SIM Only pogodnost 3 GB</div>
+                                                          </label> 
+                                                         </div>
+                                          </div>  
+                                          </div>    
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <div class="text-blue">Popusti
+                                      <i id="chevron22" class="fa fa-angle-down icon-gray align-right" onclick="expand(this.id,'expand22','division2','block')"></i>
+                                      <i id="expand22" class="fa fa-angle-up icon-gray align-right" onclick="expand(this.id,'chevron22','division2','none')"></i>
+                                      </div>
+                                      <div class="gray-background" id="division2">
+                                      <div class="box2">
+                                     <div class="row">
+                                        <div class="list-item  col-xs-4 col-sm-6">
+                                            <div class="form-control">
+                                                <div style="display:flex;">  
+                                                    <div class="checkbox graybox centre-checkbox flexgrow">
+                                                <input id="checkbox-31" type="checkbox">
+                                                <label for="checkbox-31" class="font24" style="width: 100%;padding: 0px;">
+                                                            
+                                                            <div class="centreLabel">Kid's ponuda</div>
+                                                        
+                                                          </label> 
+                                                </div>
+                                                <div><span class="fa fa-warning warning-icon"></span></div>
+                                            </div>  
+                                            </div>       
+                                        </div>
+                                        <div class="list-item  col-xs-4 col-sm-6">
+                                            <div class="form-control">
+                                                <div class="checkbox graybox centre-checkbox flexgrow">
+                                                <input id="checkbox-32" type="checkbox">
+                                                <label for="checkbox-32" class="font24" style="width: 100%;padding: 0px;">
+                                                            <div class="centreLabel">Dodatni popust na mj. naknadu za D2D OTPO 12</div>
+                                                        </label> 
+                                                       </div>
+                                        </div>              
+                                        </div>
+                                        <div class="list-item  col-xs-4 col-sm-6">
+                                            <div class="form-control">
+                                                <div class="checkbox graybox centre-checkbox flexgrow">
+                                                <input id="checkbox-33" type="checkbox">
+                                                <label for="checkbox-33" class="font24" style="width: 100%;padding: 0px;">
+                                                            <div class="centreLabel">Fleksibilni popusti</div>
+                                                        </label> 
+                                                       </div>
+                                        </div>                        
+                                      </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="list-item  col-xs-4 col-sm-6">
+                                              <div class="form-control">
+                                                  <div class="checkbox graybox centre-checkbox flexgrow">
+                                                  <input id="checkbox-34" type="checkbox">
+                                                  <label for="checkbox-34" class="font24" style="width: 100%;padding: 0px;">
+                                                              <div class="centreLabel">SIM Only pogodnost</div>
+                                                          </label> 
+                                                         </div>
+                                          </div>               
+                                          </div>
+                                          <div class="list-item  col-xs-4 col-sm-6">
+                                              <div class="form-control">
+                                                  <div class="checkbox graybox centre-checkbox flexgrow">
+                                                  <input id="checkbox-35" type="checkbox">
+                                                  <label for="checkbox-35" class="font24" style="width: 100%;padding: 0px;">
+                                                              <div class="centreLabel">SIM Only pogodnost</div>
+                                                          </label> 
+                                                         </div>
+                                          </div>                        
+                                          </div>
+                                          <div class="list-item  col-xs-4 col-sm-6">
+                                              <div class="form-control">
+                                                  <div class="checkbox graybox centre-checkbox flexgrow">
+                                                  <input id="checkbox-36" type="checkbox">
+                                                  <label for="checkbox-36" class="font24" style="width: 100%;padding: 0px;">
+                                                              <div class="centreLabel">SIM Only pogodnost</div>
+                                                          </label> 
+                                                         </div>
+                                          </div>                        
+                                          </div>                                 
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <div class="text-blue">Servisi
+                                      <i id="chevron23" class="fa fa-angle-down icon-gray align-right" onclick="expand(this.id,'expand23','division3','block')"></i>
+                                      <i id="expand23" class="fa fa-angle-up icon-gray align-right" onclick="expand(this.id,'chevron23','division3','none')"></i>
+                                      </div>
+                                      <div class="gray-background" id="division3">
+                                      <div class="box2">
+                                          <div class="row">
+                                              <div class="list-item  col-xs-4 col-sm-6">
+                                                  <div class="form-control">
+                                                      <div style="display:flex;">  
+                                                          <div class="checkbox graybox centre-checkbox flexgrow">
+                                                      <input id="checkbox-41" type="checkbox">
+                                                      <label for="checkbox-41" class="font24" style="width: 100%;padding: 0px;">
+                                                                  
+                                                                  <div class="centreLabel">Kid's ponuda</div>
+                                                              
+                                                                </label> 
+                                                      </div>
+                                                      <div><span class="fa fa-warning warning-icon"></span></div>
+                                                  </div>  
+                                                  </div>       
+                                              </div>
+                                              <div class="list-item  col-xs-4 col-sm-6">
+                                                  <div class="form-control">
+                                                      <div class="checkbox graybox centre-checkbox flexgrow">
+                                                      <input id="checkbox-42" type="checkbox">
+                                                      <label for="checkbox-42" class="font24" style="width: 100%;padding: 0px;">
+                                                                  <div class="centreLabel">Dodatni popust na mj. naknadu za D2D OTPO 12</div>
+                                                              </label> 
+                                                             </div>
+                                              </div>              
+                                              </div>
+                                              <div class="list-item  col-xs-4 col-sm-6">
+                                                  <div class="form-control">
+                                                      <div class="checkbox graybox centre-checkbox flexgrow">
+                                                      <input id="checkbox-43" type="checkbox">
+                                                      <label for="checkbox-43" class="font24" style="width: 100%;padding: 0px;">
+                                                                  <div class="centreLabel">Fleksibilni popusti</div>
+                                                              </label> 
+                                                             </div>
+                                              </div>                        
+                                            </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="list-item  col-xs-4 col-sm-6">
+                                                    <div class="form-control">
+                                                        <div class="checkbox graybox centre-checkbox flexgrow">
+                                                        <input id="checkbox-44" type="checkbox">
+                                                        <label for="checkbox-44" class="font24" style="width: 100%;padding: 0px;">
+                                                                    <div class="centreLabel">SIM Only pogodnost</div>
+                                                                </label> 
+                                                               </div>
+                                                </div>               
+                                                </div>
+                                                <div class="list-item  col-xs-4 col-sm-6">
+                                                    <div class="form-control">
+                                                        <div class="checkbox graybox centre-checkbox flexgrow">
+                                                        <input id="checkbox-45" type="checkbox">
+                                                        <label for="checkbox-45" class="font24" style="width: 100%;padding: 0px;">
+                                                                    <div class="centreLabel">SIM Only pogodnost</div>
+                                                                </label> 
+                                                               </div>
+                                                </div>                        
+                                                </div>
+                                                <div class="list-item  col-xs-4 col-sm-6">
+                                                    <div class="form-control">
+                                                        <div class="checkbox graybox centre-checkbox flexgrow">
+                                                        <input id="checkbox-46" type="checkbox">
+                                                        <label for="checkbox-46" class="font24" style="width: 100%;padding: 0px;">
+                                                                    <div class="centreLabel">SIM Only pogodnost</div>
+                                                                </label> 
+                                                               </div>
+                                                </div>                        
+                                                </div>                                 
+                                            </div>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <div class="fadedScroller_fade"></div>
+                                    </div>
+    
+    
+                    </div>
+                    <div class="col-xs-3">
+                            <div class="rightbox">
+                                    <div class="dataHead-container">
+                                      <div class="rightbox-row padding5">
+                                        <span class="fas fa-angle-double-up align-right" style="margin-right:7px;"></span>
+                                        <span class="fab fa-sistrix align-right"></span>
+                                      </div>
+                                    </div>
+                                    <div id="noScroller" class="noScroller">
+                                    <div class="margin5">
+                                    <div class="row1" style="display:flex;">
+                                        <div class="flexgrow">Tarifa</div>
+                                        <div>
+                                        <span id="menudown31" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                                          onclick="expand(this.id,'menuup31','division31','block')"></span>
+                                        <span id="menuup31" class="glyphicon glyphicon-menu-up align-right"
+                                          onclick="expand(this.id,'menudown31','division31','none')"></span>
+                                        </div>
+                                      </div>
+                                    <div id="division31" class="sidebox-container gray-background">
+                                      <div class="pink-color">OTPO</div>
+                                      <select class="select2">
+                                        <option>12 mjeseci</option>
+                                      </select>
+                                      <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                      <div class="pink-color text-reduce">Zebrana odlaznih i dolaznih usluga u roaming</div>
+                                      <select class="select2">
+                                        <option>-</option>
+                                      </select>
+                                      <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                    </div>
+                                  </div>
+                                  <div class="margin5">
+                                    <div class="row1 darkgray-background" style="display:flex;">
+                                        <div class="flexgrow">Resursi mobilne linije</div>
+                                        <div>
+                                        <span id="menudown32" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                                          onclick="expand(this.id,'menuup32','division32','block')"></span>
+                                        <span id="menuup32" class="glyphicon glyphicon-menu-up align-right"
+                                          onclick="expand(this.id,'menudown32','division32','none')"></span>
+                                        </div>
+                                      </div>
+                                      <div id="division32" class="sidebox-container gray-background">
+                                        <div class="pink-color">karaktenstika 1 </div>
+                                        <select class="select2">
+                                          <option>12 mjeseci</option>
+                                        </select>
+                                        <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                        <div class="pink-color text-reduce">karaktenstika 2</div>
+                                        <select class="select2">
+                                          <option>-</option>
+                                        </select>
+                                        <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                      </div>
+                                    </div>
+                                    <div class="margin5">
+                                        <div class="row1 darkgray-background" style="display:flex;">
+                                            <div class="flexgrow">SPH 1</div>
+                                            <div>
+                                            <span id="menudown33" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                                              onclick="expand(this.id,'menuup33','division33','block')"></span>
+                                            <span id="menuup33" class="glyphicon glyphicon-menu-up align-right"
+                                              onclick="expand(this.id,'menudown33','division33','none')"></span>
+                                            </div>
+                                          </div>
+                                          <div id="division33" class="sidebox-container gray-background">
+                                            <div class="pink-color">karaktenstika 1                                                                                                                                                                                                                                                                                                                                                                                                                                                      </div>
+                                            <select class="select2">
+                                              <option>12 mjeseci</option>
+                                            </select>
+                                            <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                            <div class="pink-color text-reduce">Karaktenstika 2</div>
+                                            <select class="select2">
+                                              <option>-</option>
+                                            </select>
+                                            <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                          </div>
+                                        </div>
+                                        <div class="margin5">
+                                            <div class="row1 darkgray-background" style="display:flex;">
+                                                <div class="flexgrow">Osiguranje uredaja</div>
+                                                <div>
+                                                <span id="menudown34" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                                                  onclick="expand(this.id,'menuup34','division34','block')"></span>
+                                                <span id="menuup34" class="glyphicon glyphicon-menu-up align-right"
+                                                  onclick="expand(this.id,'menudown34','division34','none')"></span>
+                                                </div>
+                                              </div>
+                                              <div id="division34" class="sidebox-container gray-background">
+                                                <div class="pink-color">OTPO</div>
+                                                <select class="select2">
+                                                  <option>12 mjeseci</option>
+                                                </select>
+                                                <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                                <div class="pink-color text-reduce">Zebrana odlaznih i dolaznih usluga u roaming</div>
+                                                <select class="select2">
+                                                  <option>-</option>
+                                                </select>
+                                                <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                              </div>
+                                            </div>
+                                            <div class="margin5">
+                                                <div class="row1 lightblue-background" style="display:flex;">
+                                                  <div class="flexgrow">Pogodnosti</div>
+                                                  <div>
+                                                    <span id="menudown35" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                                                      onclick="expand(this.id,'menuup35','division35','block')"></span>
+                                                    <span id="menuup35" class="glyphicon glyphicon-menu-up align-right"
+                                                      onclick="expand(this.id,'menudown35','division35','none')"></span>
+                                                    </div>
+                                                  </div>
+                                                  <div id="division35" class="sidebox-container gray-background">
+                                                    <div class="pink-color">OTPO</div>
+                                                    <select class="select2">
+                                                      <option>12 mjeseci</option>
+                                                    </select>
+                                                    <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                                    <div class="pink-color text-reduce">Zebrana odlaznih i dolaznih usluga u roaming</div>
+                                                    <select class="select2">
+                                                      <option>-</option>
+                                                    </select>
+                                                    <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                                  </div>
+                                                </div>
+                                                <div class="margin5">
+                                                    <div class="row1 darkgray-background" style="display:flex;">
+                                                      <div class="flexgrow">Najbolja obitelj</div>
+                                                      <div>
+                                                        <span id="menudown36" class="glyphicon glyphicon glyphicon-menu-down align-right"
+                                                          onclick="expand(this.id,'menuup36','division36','block')"></span>
+                                                        <span id="menuup36" class="glyphicon glyphicon-menu-up align-right"
+                                                          onclick="expand(this.id,'menudown36','division36','none')"></span>
+                                                        </div>
+                                                      </div>
+                                                      <div id="division36" class="sidebox-container gray-background">
+                                                        <div class="pink-color">Karaktenstika 1</div>
+                                                        <select class="select2">
+                                                          <option>12 mjeseci</option>
+                                                        </select>
+                                                        <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                                        <div class="pink-color text-reduce">Karaktenstika 2</div>
+                                                        <select class="select2">
+                                                          <option>-</option>
+                                                        </select>
+                                                        <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                                        <div class="pink-color">Karaktenstika 3</div>
+                                                        <select class="select2">
+                                                          <option>12 mjeseci</option>
+                                                        </select>
+                                                        <span class="glyphicon glyphicon-menu-down icon2-select"></span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                    <div class="noScroller_fade"></div>
+                                                  </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            <div class="container-fluid footer">
+                <div class="row elipsis"  style="background-color: white;">
+                    <div class="col-sm-4" style="padding-top:10px;">
+                       <!---<ul id="list">
+                        <li><button type="button" class="btn btn-secondary">Odustani</button>
+                        <li><button type="button" class="btn btn-outline-secondary">Spermi</button>
+                        <li><button type="button" class="btn btn-outline-secondary">i</button>
+                        <li><button type="button" class="btn btn-outline-secondary">$</button>
+                        </ul>-->
+                        <button type="button" class="btn btn-secondary">Odustani</button>
+                        <button type="button" class="btn btn-outline-secondary">Spermi</button>
+                        <button type="button" class="btn btn-outline-secondary">i</button>
+                        <button type="button" class="btn btn-outline-secondary">$</button>
+    
+                       </div>                       
+                             <div class="col-sm-2 ">
+                               <div class="elipsis">Jeorokratra naplata</div>
+                               <div class="kn elipsis">20,00 kn</div>
+                             </div>
+                             <div class="col-sm-2">
+                                <div class="elipsis" >Poravijajuca naciata</div>
+                                <div class="kn elipsis">169,00 kn</div>
+                            </div>     
+                            <div class="col-sm-1"></div>                     
+                        <div class="col-sm-3" style="padding-top:10px;">
+                               <button type="button" class="btn btn-outline-secondary"><i class="fa fa-chevron-left icon" aria-hidden="true"></i></button>
+                               <button type="button" class="btn btn-outline-secondary"><i class="fa fa-chevron-right icon" aria-hidden="true"></i></button>
+                               <button type="button" class="btn pinkbtn space" >Zavrsi</button>
+                    </div>                         
+                   </div>
+                </div>
+        <script>
+                function hideORshow(id,id2){
+                document.getElementById(id).style.display = "none";
+                document.getElementById(id2).style.display = "block";
+            }
+            function showSidecontent(checkboxId,id){
+              document.getElementById(id).style.display = "block";
+            }
+            function expand2(id1,id2)
+            {
+                hideORshow(id1,id2);
+                document.getElementById("expand2-option1").style.display = "block";
+                document.getElementById("expand2-option2").style.display = "block";
+                document.getElementById("expand2-option3").style.display = "block";
+            }
+            
+            function chevron2(id1,id2)
+            {
+                hideORshow(id1,id2);
+                document.getElementById("expand2-option1").style.display = "none";
+                document.getElementById("expand2-option2").style.display = "none";
+                document.getElementById("expand2-option3").style.display = "none";
+            }
+            function expand3(id1,id2)
+            {
+                hideORshow(id1,id2);
+                document.getElementById("expand3-option1").style.display = "block";
+                document.getElementById("expand3-option2").style.display = "block";
+                document.getElementById("expand3-option3").style.display = "block";
+                document.getElementById("expand3-option4").style.display = "block";
+                document.getElementById("expand3-option5").style.display = "block";
+                document.getElementById("expand3-option6").style.display = "block";
+            }
+            
+            function chevron3(id1,id2)
+            {
+                hideORshow(id1,id2);
+                document.getElementById("expand3-option1").style.display = "none";
+                document.getElementById("expand3-option2").style.display = "none";
+                document.getElementById("expand3-option3").style.display = "none";
+                document.getElementById("expand3-option4").style.display = "none";
+                document.getElementById("expand3-option5").style.display = "none";
+                document.getElementById("expand3-option6").style.display = "none";
+            }
+            
+            function checksubfields(id,subid){
+            
+            if(document.getElementById(id).checked == true)
+            {
+            var i;
+            for(i=1;i<=subid;i++){
+                document.getElementById(id+i).checked = true;
+            }
+            }
+            else
+            {
+                var i;
+            for(i=1;i<=subid;i++){
+                document.getElementById(id+i).checked = false;
+            }
+            }
+            }
+            
+            function expand(id1,id2,divId,action){
+                hideORshow(id1,id2);
+                document.getElementById(divId).style.display = action;
+            }
+            </script>
+</body>
