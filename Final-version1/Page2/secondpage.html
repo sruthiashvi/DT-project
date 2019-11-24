@@ -92,13 +92,12 @@ $("#showtarifne").click(function(){
 $(".opentarifne").toggle()
 
 });
-$(".card").focus(function(){
+$(".card").click(function(){
 $(this).css("border","1px solid #ff1a8c")
-
-});
-$(".card").blur(function(){
-$(this).css("border","")
-});   
+});  
+$(".selectcolor").click(function(){
+$(this).css("background-color","#ff1a8c")
+}); 
 });
 </script>
 <style>
@@ -168,10 +167,12 @@ border-radius: 2px;
 <div class="col-md-6 col-xl-2">
 <div class="header">Rola</div>
 <select class="form-control highlight">
+<optgroup class="selectcolor">
 <option>Direktno</option>
+<option>Aktivacijaaaaaaaaaaa</option>
 <option></option>
 <option></option>
-<option></option>
+</optgroup>
 </select>
 </div>
 </div>
